@@ -18,6 +18,10 @@ a python project for listening [Kasetophono](http://www.kasetophono.com)'s youtu
     `sudo pip3 install mps-youtube`
 
 
+## Installation
+
+`git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
+
 ## Usage
 
 just run kasetophono.py
