@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import menu, playlist
+import menu, playlist, exit, home
+from termcolor import colored
 
 def Menu():
     title = 'Διαθεση'
@@ -12,6 +13,8 @@ def Menu():
                     #{"name":"Sexy","function":sexy},
                     #{"name":"Ερωτικές","function":erotic},
                     #{"name":"Party","function":party}
+                    {"name":colored("Home Menu","yellow"),"function":home.Menu},
+                    {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     MoodMenu.addOptions(options)
     MoodMenu.open()

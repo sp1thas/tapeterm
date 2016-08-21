@@ -12,5 +12,6 @@ __all__ =   [
                 "roulette",
                 "start",
                 "twentyfour",
-                "AllPlaylists"
+                "AllPlaylists",
+                "exit"
             ]

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-import menu
+import menu, sys, exit
 import ksena, greek, categories, mood, alternative_indie, lovers, events, roulette, dj
-
+from termcolor import colored
 def Menu():
     title = 'Κεντρικό Μενού'
     MainMenu = menu.Menu(title)
@@ -14,7 +14,8 @@ def Menu():
                     #{"name":"Lovers","function":lovers.menu},
                     #{"name":"Events","function":events.menu},
                     #{"name":"Ρουλέτα","function":roulette.menu},
-                    #{"name":"DJ","function":dj.menu}
+                    #{"name":"DJ","function":dj.menu},
+                    {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     MainMenu.addOptions(options)
     MainMenu.open()

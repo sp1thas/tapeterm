@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import menu
+import menu, exit
 
 def menu():
     pass

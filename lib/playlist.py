@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
+from termcolor import colored
 from subprocess import call
-import AllPlaylists, menu, home
+import AllPlaylists, menu, home,exit
 
 '''
     FullList returns a dict.
@@ -24,14 +25,16 @@ def FullList(category):
 
     for i in FinalPlaylist:
         print i,". ",FinalPlaylist[i][0]
-    print len(FinalPlaylist)+1,".  Home Menu"
+    print len(FinalPlaylist)+1,colored(".  Home Menu","yellow")
     select = 0
 
-    select = input("Επιλέξτε λίστα\n>>> ")
+    select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
     if select == len(FinalPlaylist)+1:
         home.Menu()
     elif (select > 0 & select <len(FinalPlaylist)+1):
         Play(FinalPlaylist[select][1])
+    elif select == 0:
+        exit.exit()
 
 
 

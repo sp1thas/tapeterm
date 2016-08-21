@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
+from termcolor import colored
 import menu
-import playlist, home
+import playlist, home, exit
 
 def Menu():
     title = 'Ξένα'
     KsenaMenu = menu.Menu(title)
     options =   [
                     {"name":"Δημοφιλείς","function":popular},
-                    {"name":"Ροκ","function":rock}
+                    {"name":"Ροκ","function":rock},
                     #{"name":"Τζαζ","function":jazz},
                     #{"name":"Ηλεκτρονικές","function":electro},
                     #{"name":"Alternative/Indie","function":alternative_indie},
@@ -18,6 +19,8 @@ def Menu():
                     #{"name":"Ακουστικές","function":popular},
                     #{"name":"More","function":rock},
                     #{"name":"Home Menu", "function":home.Menu}
+                    {"name":colored("Home Menu","yellow"),"function":home.Menu},
+                    {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     KsenaMenu.addOptions(options)
     KsenaMenu.open()
