@@ -3,7 +3,7 @@ from termcolor import colored
 import menu
 import playlist, home, exit
 
-def Menu():
+def ListMenu():
     title = 'Ξένα'
     KsenaMenu = menu.Menu(title)
     options =   [
@@ -19,7 +19,7 @@ def Menu():
                     #{"name":"Ακουστικές","function":popular},
                     #{"name":"More","function":rock},
                     #{"name":"Home Menu", "function":home.Menu}
-                    {"name":colored("Home Menu","yellow"),"function":home.Menu},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
                     {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     KsenaMenu.addOptions(options)
