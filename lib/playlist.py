@@ -13,7 +13,7 @@ def FullList(category):
     allPlaylists = AllPlaylists.GetThem()
     FinalPlaylist = {}
     for i in allPlaylists:
-        if allPlaylists[i][2] == category:
+        if allPlaylists[i][2] == category or allPlaylists[i][3] == category:
             FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
 
 

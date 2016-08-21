@@ -10,7 +10,7 @@ def Menu():
                     #{"name":"Ελληνικά","function":greek.menu},
                     {"name":"Κατηγορίες","function":categories.Menu},
                     {"name":"Διάθεση","function":mood.Menu},
-                    #{"name":"24ωρο","function":alternative_indie},
+                    {"name":"24ωρο","function":alternative_indie},
                     #{"name":"Lovers","function":lovers.menu},
                     #{"name":"Events","function":events.menu},
                     #{"name":"Ρουλέτα","function":roulette.menu},
