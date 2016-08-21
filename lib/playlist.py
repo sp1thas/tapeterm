@@ -22,7 +22,6 @@ def FullList(category):
         counter += 1
         FinalPlaylist[counter] = FinalPlaylist.pop(i)
 
-    print len(FinalPlaylist)
     for i in FinalPlaylist:
         print i,". ",FinalPlaylist[i][0]
     print len(FinalPlaylist)+1,".  Home Menu"

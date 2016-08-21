@@ -7,17 +7,17 @@ def Menu():
     KsenaMenu = menu.Menu(title)
     options =   [
                     {"name":"Δημοφιλείς","function":popular},
-                    {"name":"Ροκ","function":rock},
-                    {"name":"Τζαζ","function":jazz},
-                    {"name":"Ηλεκτρονικές","function":electro},
-                    {"name":"Alternative/Indie","function":alternative_indie},
-                    {"name":"World","function":world},
-                    {"name":"Βίντατζ","function":vintage},
-                    {"name":"Διασκευές/Remixes","function":remixes},
-                    {"name":"Ορχηστρικές","function":orchestral},
-                    {"name":"Ακουστικές","function":popular},
-                    {"name":"More","function":rock},
-                    {"name":"Home Menu", "function":home.Menu}
+                    {"name":"Ροκ","function":rock}
+                    #{"name":"Τζαζ","function":jazz},
+                    #{"name":"Ηλεκτρονικές","function":electro},
+                    #{"name":"Alternative/Indie","function":alternative_indie},
+                    #{"name":"World","function":world},
+                    #{"name":"Βίντατζ","function":vintage},
+                    #{"name":"Διασκευές/Remixes","function":remixes},
+                    #{"name":"Ορχηστρικές","function":orchestral},
+                    #{"name":"Ακουστικές","function":popular},
+                    #{"name":"More","function":rock},
+                    #{"name":"Home Menu", "function":home.Menu}
                 ]
     KsenaMenu.addOptions(options)
     KsenaMenu.open()
