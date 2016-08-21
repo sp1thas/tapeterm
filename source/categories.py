@@ -3,11 +3,11 @@ import menu, exit
 import playlist, home, mood, ksena
 from termcolor import colored
 
-def Menu():
+def ListMenu():
     title = 'Ξένα'
     CategoriesMenu = menu.Menu(title)
     options =   [
-                    {"name":"Διάθεση","function":mood.Menu},
+                    {"name":"Διάθεση","function":mood.ListMenu},
                     #{"name":"Καλοκαιρινές","function":kalokairines},
                     #{"name":"24ωρο","function":twentyfour}
                     #{"name":"Μουσικά Είδη","function":electro},
@@ -19,7 +19,7 @@ def Menu():
                     #{"name":"Ακουστικές","function":popular},
                     #{"name":"More","function":rock},
                     #{"name":"Home Menu", "function":home.Menu}
-                    {"name":colored("Home Menu","yellow"),"function":home.Menu},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
                     {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     CategoriesMenu.addOptions(options)

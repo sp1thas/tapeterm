@@ -5,4 +5,4 @@ from lib import *
 start.logo()
 
 
-home.Menu()
+home.ListMenu()

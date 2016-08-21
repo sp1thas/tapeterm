@@ -13,7 +13,7 @@ def FullList(category):
     allPlaylists = AllPlaylists.GetThem()
     FinalPlaylist = {}
     for i in allPlaylists:
-        if allPlaylists[i][2] == category:
+        if allPlaylists[i][2] == category or allPlaylists[i][3] == category:
             FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
 
 
@@ -30,7 +30,7 @@ def FullList(category):
 
     select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
     if select == len(FinalPlaylist)+1:
-        home.Menu()
+        home.ListMenu()
     elif (select > 0 & select <len(FinalPlaylist)+1):
         Play(FinalPlaylist[select][1])
     elif select == 0:
