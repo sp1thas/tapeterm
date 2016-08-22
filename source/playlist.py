@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+#   ===================================
+#               playlist
+#   ===================================
+__author__ = "Simakis Panagiotis"
+__license__ = "GPL"
+__email__ = "sp1thas@autistici.org"
+#   ===================================
+
 from termcolor import colored
 from subprocess import call
 import AllPlaylists, menu, home,exit

@@ -1,8 +1,15 @@
 # -*- coding: utf-8 -*-
+#   ===================================
+#               __init__
+#   ===================================
+__author__ = "Simakis Panagiotis"
+__license__ = "GPL"
+__email__ = "sp1thas@autistici.org"
+#   ===================================
+
 __all__ =   [
                 "categories",
                 "dj",
-                "events",
                 "greek",
                 "ksena",
                 "lovers",
