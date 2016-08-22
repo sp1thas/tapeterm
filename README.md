@@ -36,19 +36,19 @@ just run kasetophono.py
 
 ## Start Page
 
-![](/assets/start.png)
+![](/assets/python-start.png)
 
 ## Main menu
 
-![](/assets/mainmenu.png)
+![](/assets/python-main.png)
 
 ## Sub menu
 
-![](/assets/submenu.png)
+![](/assets/python-submenu.png)
 
 ## Playlists
 
-![](/assets/playlists.png)
+![](/assets/python-playlist.png)
 
 ## Playing
 
