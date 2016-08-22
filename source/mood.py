@@ -16,7 +16,7 @@ def ListMenu():
     options =   [
                     {"name":"Χαρούμενες","function":xaroumenes},
                     {"name":"Χαλαρωτικές","function":xalarwtikes},
-                    #{"name":"Μελαγχολικές","function":melagxolikes},
+                    {"name":"Μελαγχολικές","function":melagxolikes},
                     {"name":"Διάβασμα","function":reading},
                     #{"name":"Sexy","function":sexy},
                     #{"name":"Ερωτικές","function":erotic},
@@ -35,7 +35,7 @@ def xalarwtikes():
     playlist.FullList('Xalarwtikes')
 
 def melagxolikes():
-    pass
+    playlist.FullList('Melagxolikes')
 
 def reading():
     playlist.FullList('Reading')

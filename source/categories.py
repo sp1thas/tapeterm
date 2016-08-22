@@ -7,21 +7,22 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-import menu, exit
-import playlist, home, mood, ksena
+import menu, exit, lovers
+import playlist, home, mood, ksena, twentyfour
 from termcolor import colored
 
 def ListMenu():
     title = 'Ξένα'
     CategoriesMenu = menu.Menu(title)
     options =   [
-                    {"name":"Διάθεση","function":mood.ListMenu},
+
                     #{"name":"Καλοκαιρινές","function":kalokairines},
-                    #{"name":"24ωρο","function":twentyfour}
-                    #{"name":"Μουσικά Είδη","function":electro},
-                    #{"name":"Alternative/Indie","function":alternative_indie},
-                    #{"name":"World","function":world},
-                    #{"name":"Βίντατζ","function":vintage},
+                    {"name":"24ωρο","function":twentyfour.ListMenu},
+                    {"name":"Διάθεση","function":mood.ListMenu},
+                    {"name":"Μουσικά Είδη","function":mousika_eidi},
+                    {"name":"Lovers","function":lovers.ListMenu},
+                    {"name":"Δραστηριότητα","function":Activity},
+                    {"name":"Μέρες","function":Days},
                     #{"name":"Διασκευές/Remixes","function":remixes},
                     #{"name":"Ορχηστρικές","function":orchestral},
                     #{"name":"Ακουστικές","function":popular},
@@ -35,23 +36,52 @@ def ListMenu():
 
 def kalokairines():
     pass
-def twentyfour():
-    pass
-
+def Activity():
+    playlist.FullList('Activity')
+def Days():
+    title = "Μέρες"
+    DaysMenu = menu.Menu(title)
+    options = [
+                {"name":"Δευτέρα","function":Monday},
+                {"name":"Τρίτη","function":Tuesday},
+                {"name":"Τετάρτη","function":Wednesday},
+                {"name":"Πέμπτη","function":Thursday},
+                {"name":"Παρασκευή","function":Friday},
+                {"name":"Σάββατο","function":Saturday},
+                {"name":"Κυριακή","function":ksena.world},
+                {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                {"name":colored("Έξοδος", "red"),"function":exit.exit}
+                ]
+    DaysMenu.addOptions(options)
+    DaysMenu.open()
+def Monday():
+    playlist.FullList('Monday')
+def Tuesday():
+    playlist.FullList('Tuesday')
+def Wednesday():
+    playlist.FullList('Wednesday')
+def Thursday():
+    playlist.FullList('Thursday')
+def Friday(arg):
+    playlist.FullList('Friday')
+def Saturday():
+    playlist.FullList('Saturday')
+def Sunday():
+    playlist.FullList('Sunday')
 def mousika_eidi():
     title = "Μουσικά Είδη"
     MouikaEidiMenu = menu.Menu(title)
     options = [
                 {"name":"Ροκ","function":ksena.rock},
                 {"name":"HipTripHop","function":HipTripHop},
-                {"name":"Reggae","function":Reggae}
-                #{"name":"Τζαζ","function":ksena.jazz},
-                #{"name":"Ηλεκτρονικές","function":ksena.electro},
-                #{"name":"Alternative","function":ksena.alternative_indie},
-                #{"name":"World Music","function":ksena.world},
-                #{"name":"Βίντατζ","function":ksena.vintage},
-                #{"name":"Διασκευές","function":ksena.remixes},
-                #{"name":"Ορχηστρικές","function":ksena.orchestral},
+                {"name":"Reggae","function":Reggae},
+                {"name":"Τζαζ","function":ksena.jazz},
+                {"name":"Ηλεκτρονικές","function":ksena.electro},
+                {"name":"Alternative","function":ksena.alternative_indie},
+                {"name":"World Music","function":ksena.world},
+                {"name":"Βίντατζ","function":ksena.vintage},
+                {"name":"Διασκευές","function":ksena.remixes},
+                {"name":"Ορχηστρικές","function":ksena.orchestral},
                 #{"name":"Beats","function":beats}
 
                 #{"name":"Ambient","function":Ambient},
@@ -63,6 +93,8 @@ def mousika_eidi():
                 # {"name":"Παιδικές","function":Paidikes},
                 # {"name":"Θεματικές","function":Thematic},
                 # {"name":"Αφιερώματα","function":Afieromata}
+                {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                {"name":colored("Έξοδος", "red"),"function":exit.exit}
 
 
     ]

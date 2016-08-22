@@ -9,7 +9,7 @@ __email__ = "sp1thas@autistici.org"
 
 from termcolor import colored
 from subprocess import call
-import AllPlaylists, menu, home,exit
+import AllPlaylists, menu, home,exit, time
 
 '''
     FullList returns a dict.
@@ -18,23 +18,20 @@ import AllPlaylists, menu, home,exit
 '''
 
 def FullList(category):
+    print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
+    counter = 0
     allPlaylists = AllPlaylists.GetThem()
     FinalPlaylist = {}
     for i in allPlaylists:
-        if allPlaylists[i][2] == category or allPlaylists[i][3] == category:
+        if allPlaylists[i][2] == category or allPlaylists[i][3] == category or allPlaylists[i][4] == category or allPlaylists[i][5]==category or allPlaylists[i][6] == category or allPlaylists[i][7]==category or allPlaylists[i][8]==category:
+            counter += 1
             FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
+            print counter,".",FinalPlaylist[i][0]
+            FinalPlaylist[counter] = FinalPlaylist.pop(i)
+            time.sleep(0.02)
 
-
-    print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
-    counter = 0
-    for i in FinalPlaylist:
-        counter += 1
-        FinalPlaylist[counter] = FinalPlaylist.pop(i)
-
-    for i in FinalPlaylist:
-        print i,". ",FinalPlaylist[i][0]
-    print len(FinalPlaylist)+1,colored(".  Home Menu","yellow")
-    select = 0
+    print len(FinalPlaylist)+1,".",colored(" Home Menu","yellow")
+    select = -1
 
     select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
     if select == len(FinalPlaylist)+1:
