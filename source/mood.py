@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+#   ===================================
+#              mood
+#   ===================================
+__author__ = "Simakis Panagiotis"
+__license__ = "GPL"
+__email__ = "sp1thas@autistici.org"
+#   ===================================
+
 import menu, playlist, exit, home
 from termcolor import colored
 

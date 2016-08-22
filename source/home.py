@@ -1,6 +1,14 @@
 # -*- coding: utf-8 -*-
+#   ===================================
+#              home
+#   ===================================
+__author__ = "Simakis Panagiotis"
+__license__ = "GPL"
+__email__ = "sp1thas@autistici.org"
+#   ===================================
+
 import menu, sys, exit
-import ksena, greek, categories, mood, alternative_indie, lovers, events, roulette, dj, twentyfour
+import ksena, greek, categories, mood, alternative_indie, lovers, roulette, dj, twentyfour
 from termcolor import colored
 def ListMenu():
     title = 'Κεντρικό Μενού'
