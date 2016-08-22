@@ -10,6 +10,17 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 ## Prerequirements
 
+## [MPV](https://mpv.io/)
+
+* Installation:
+  * **Debian\/Ubuntu** based:
+    `[sudo] apt-get install mpv`
+  * **Fedora** based:
+    `[sudo] yum install mpv`
+  * **Arch** based:
+    `[sudo] pacman -S mpv`
+
+
 ### Python Modules
 
 * [menus](https://pypi.python.org/pypi/Menus)
@@ -36,19 +47,19 @@ just run kasetophono.py
 
 ## Start Page
 
-![](/assets/start.png)
+![](/assets/python-start.png)
 
 ## Main menu
 
-![](/assets/mainmenu.png)
+![](/assets/python-main.png)
 
 ## Sub menu
 
-![](/assets/submenu.png)
+![](/assets/python-submenu.png)
 
 ## Playlists
 
-![](/assets/playlists.png)
+![](/assets/python-playlist.png)
 
 ## Playing
 
