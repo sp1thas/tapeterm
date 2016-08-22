@@ -46,5 +46,5 @@ just run kasetophono.py
 
 ## Playing
 
-![](/assets/python-playlist.png)
+![](/assets/python-playing.png)
 
