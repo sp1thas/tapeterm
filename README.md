@@ -12,6 +12,12 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 ### Python Modules
 
+* [menus](https://pypi.python.org/pypi/Menus)
+
+  * Installation:
+    `sudo pip install menus`
+
+
 * [mps-youtube](https://github.com/mps-youtube/)
 
   * Installation:
