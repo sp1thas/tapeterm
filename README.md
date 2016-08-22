@@ -10,6 +10,15 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 ## Prerequirements
 
+## [MPV](https://mpv.io/)
+
+* Installation:
+  * Debian based:
+    sudo apt-get install mpv
+  * Fedora based:
+    sudo yum install mpv
+
+
 ### Python Modules
 
 * [menus](https://pypi.python.org/pypi/Menus)
