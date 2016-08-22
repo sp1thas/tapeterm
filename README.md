@@ -13,10 +13,12 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 ## [MPV](https://mpv.io/)
 
 * Installation:
-  * Debian based:
-    sudo apt-get install mpv
-  * Fedora based:
-    sudo yum install mpv
+  * **Debian\/Ubuntu** based:
+    `[sudo] apt-get install mpv`
+  * **Fedora** based:
+    `[sudo] yum install mpv`
+  * **Arch** based:
+    `[sudo] pacman -S mpv`
 
 
 ### Python Modules
