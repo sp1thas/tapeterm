@@ -22,16 +22,20 @@ import AllPlaylists, menu, home,exit, time
 def FullList(category):
     print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
     counter = 0
-    allPlaylists = AllPlaylists.GetThem()
-    FinalPlaylist = {}
-    for i in allPlaylists:
-        if allPlaylists[i][2] == category or allPlaylists[i][3] == category or allPlaylists[i][4] == category or allPlaylists[i][5]==category or allPlaylists[i][6] == category or allPlaylists[i][7]==category or allPlaylists[i][8]==category:
-            counter += 1
-            FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
-            print counter,".",FinalPlaylist[i][0]
-            FinalPlaylist[counter] = FinalPlaylist.pop(i)
-            time.sleep(0.02)
+    FinalPlaylist = AllPlaylists.GetThem(category)
 
+    # for i in allPlaylists:
+    #     if allPlaylists[i][2] == category or allPlaylists[i][3] == category or allPlaylists[i][4] == category or allPlaylists[i][5]==category or allPlaylists[i][6] == category or allPlaylists[i][7]==category or allPlaylists[i][8]==category:
+    #         counter += 1
+    #         FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
+    #         print counter,".",FinalPlaylist[i][0]
+    #         FinalPlaylist[counter] = FinalPlaylist.pop(i)
+    #         time.sleep(0.02)
+
+    for i in FinalPlaylist:
+        counter += 1
+        print counter,".",FinalPlaylist[i][0]
+        time.sleep(0.1)
     print len(FinalPlaylist)+1,".",colored(" Home Menu","yellow")
     select = -1
 
