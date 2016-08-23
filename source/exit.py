@@ -13,4 +13,5 @@ import sys
 
 def exit():
     call(["clear"])
+    print "See Ya!"
     sys.exit()
