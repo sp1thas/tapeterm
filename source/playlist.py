@@ -34,9 +34,16 @@ def FullList(category):
 
     for i in FinalPlaylist:
         counter += 1
-        print counter,".",FinalPlaylist[i][0]
-        time.sleep(0.1)
-    print len(FinalPlaylist)+1,".",colored(" Home Menu","yellow")
+        if counter % 2 == 0:
+            OutputStr = str(counter)+". "+FinalPlaylist[i][0]
+            print colored(OutputStr, "magenta")
+            time.sleep(0.1)
+        else:
+            OutputStr = str(counter)+". "+FinalPlaylist[i][0]
+            print OutputStr
+            time.sleep(0.1)
+    OutputStr = str(len(FinalPlaylist)+1)+". "+"Home Menu"
+    print colored(OutputStr,"yellow")
     select = -1
 
     select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
