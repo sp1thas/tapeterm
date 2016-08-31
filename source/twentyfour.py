@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #   ===================================
+#       kasetophon sto termatiko
+#   ===================================
 #               twentyfour
 #   ===================================
 __author__ = "Simakis Panagiotis"
@@ -8,8 +10,7 @@ __email__ = "sp1thas@autistici.org"
 #   ===================================
 
 from termcolor import colored
-import menu
-import playlist, home, exit
+import playlist, home, exit, menu
 
 def ListMenu():
     title = '24ωρο'

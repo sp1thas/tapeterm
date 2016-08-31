@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
 #   ===================================
+#       kasetophon sto termatiko
+#   ===================================
 #              start
 #   ===================================
 __author__ = "Simakis Panagiotis"
 __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
+from subprocess import call
 from termcolor import colored
+def SetMPV():
+    call(["mpsyt", "set", "player", "mpv,q"])
+    call(["clear"])
+
 def logo():
     logo=   '                                   _                            \n'\
             '                                  | |                           \n'\

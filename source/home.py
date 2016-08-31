@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #   ===================================
+#       kasetophon sto termatiko
+#   ===================================
 #              home
 #   ===================================
 __author__ = "Simakis Panagiotis"
@@ -19,7 +21,7 @@ def ListMenu():
                     {"name":"Κατηγορίες","function":categories.ListMenu},
                     {"name":"Διάθεση","function":mood.ListMenu},
                     {"name":"24ωρο","function":twentyfour.ListMenu},
-                    #{"name":"Lovers","function":lovers.menu},
+                    {"name":"Lovers","function":lovers.ListMenu},
                     #{"name":"Events","function":events.menu},
                     #{"name":"Ρουλέτα","function":roulette.menu},
                     #{"name":"DJ","function":dj.menu},

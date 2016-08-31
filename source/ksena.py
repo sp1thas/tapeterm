@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #   ===================================
+#       kasetophon sto termatiko
+#   ===================================
 #              ksena
 #   ===================================
 __author__ = "Simakis Panagiotis"
@@ -25,7 +27,7 @@ def ListMenu():
 {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
 {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
-                
+
     KsenaMenu.addOptions(options)
     KsenaMenu.open()
 

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #   ===================================
+#       kasetophon sto termatiko
+#   ===================================
 #               lovers
 #   ===================================
 __author__ = "Simakis Panagiotis"
@@ -7,7 +9,8 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-import menu
+import menu, exit, playlist, home
+from termcolor import colored
 
 def ListMenu():
     title = 'Lovers'
@@ -44,5 +47,5 @@ def RainLovers():
     playlist.FullList('RainLovers')
 def SeaLovers():
     playlist.FullList('SeaLovers')
-def SunLovers(arg):
+def SunLovers():
     playlist.FullList('SunLovers')

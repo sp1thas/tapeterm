@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #   ===================================
+#       kasetophon sto termatiko
+#   ===================================
 #               AllPlaylists
 #   ===================================
 __author__ = "Simakis Panagiotis"
@@ -7,8 +9,8 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-def GetThem():
-    return  {
+def GetThem(category):
+    allPlaylists =  {
                 1:[u'Bob Marley','PLSRDGXudTSm_x9lRMuGbm6Mf-Gx8NfmfW','Reggae','','','','','','','','','','','',''],
                 2:[u'Summer Roots', 'PLSRDGXudTSm8YFJzLVX8Yk0ZcwxVdooai','Reggae','','','','','','','','','','','',''],
                 3:[u'Mad About You','PLSRDGXudTSm8x2vcosYPD1sqE3cnFVw8c','HipTripHop','Tuesday','','','','','','','','','','','',''],
@@ -410,3 +412,11 @@ def GetThem():
                 # 400:[u'','','','','','','','','','','','','','','','','']
 
             }
+    FinalPlaylist = {}
+    counter = 0
+    for i in allPlaylists:
+        if allPlaylists[i][2] == category or allPlaylists[i][3] == category or allPlaylists[i][4] == category or allPlaylists[i][5]==category or allPlaylists[i][6] == category or allPlaylists[i][7]==category or allPlaylists[i][8]==category:
+            counter += 1
+            FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
+            FinalPlaylist[counter] = FinalPlaylist.pop(i)
+    return FinalPlaylist

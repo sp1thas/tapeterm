@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #   ===================================
+#       kasetophon sto termatiko
+#   ===================================
 #               playlist
 #   ===================================
 __author__ = "Simakis Panagiotis"
@@ -20,17 +22,28 @@ import AllPlaylists, menu, home,exit, time
 def FullList(category):
     print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
     counter = 0
-    allPlaylists = AllPlaylists.GetThem()
-    FinalPlaylist = {}
-    for i in allPlaylists:
-        if allPlaylists[i][2] == category or allPlaylists[i][3] == category or allPlaylists[i][4] == category or allPlaylists[i][5]==category or allPlaylists[i][6] == category or allPlaylists[i][7]==category or allPlaylists[i][8]==category:
-            counter += 1
-            FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
-            print counter,".",FinalPlaylist[i][0]
-            FinalPlaylist[counter] = FinalPlaylist.pop(i)
-            time.sleep(0.02)
+    FinalPlaylist = AllPlaylists.GetThem(category)
 
-    print len(FinalPlaylist)+1,".",colored(" Home Menu","yellow")
+    # for i in allPlaylists:
+    #     if allPlaylists[i][2] == category or allPlaylists[i][3] == category or allPlaylists[i][4] == category or allPlaylists[i][5]==category or allPlaylists[i][6] == category or allPlaylists[i][7]==category or allPlaylists[i][8]==category:
+    #         counter += 1
+    #         FinalPlaylist[i] = [allPlaylists[i][0], allPlaylists[i][1]]
+    #         print counter,".",FinalPlaylist[i][0]
+    #         FinalPlaylist[counter] = FinalPlaylist.pop(i)
+    #         time.sleep(0.02)
+
+    for i in FinalPlaylist:
+        counter += 1
+        if counter % 2 == 0:
+            OutputStr = str(counter)+". "+FinalPlaylist[i][0]
+            print colored(OutputStr, "magenta")
+            time.sleep(0.1)
+        else:
+            OutputStr = str(counter)+". "+FinalPlaylist[i][0]
+            print OutputStr
+            time.sleep(0.1)
+    OutputStr = str(len(FinalPlaylist)+1)+". "+"Home Menu"
+    print colored(OutputStr,"yellow")
     select = -1
 
     select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
