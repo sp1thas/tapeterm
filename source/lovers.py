@@ -47,5 +47,5 @@ def RainLovers():
     playlist.FullList('RainLovers')
 def SeaLovers():
     playlist.FullList('SeaLovers')
-def SunLovers(arg):
+def SunLovers():
     playlist.FullList('SunLovers')
