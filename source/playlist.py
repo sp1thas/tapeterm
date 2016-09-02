@@ -11,7 +11,7 @@ __email__ = "sp1thas@autistici.org"
 
 from termcolor import colored
 from subprocess import call
-import AllPlaylists, menu, home,exit, time
+import AllPlaylists, menu, home,exit, time, ksena, categories, lovers, mood, twentyfour
 
 '''
     FullList returns a dict.
@@ -19,7 +19,7 @@ import AllPlaylists, menu, home,exit, time
     ['playlist label name','playlist youtube id', ]
 '''
 
-def FullList(category):
+def FullList(category, *ParentMenuFunc):
     print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
     counter = 0
     FinalPlaylist = AllPlaylists.GetThem(category)
@@ -42,12 +42,20 @@ def FullList(category):
             OutputStr = str(counter)+". "+FinalPlaylist[i][0]
             print OutputStr
             time.sleep(0.1)
-    OutputStr = str(len(FinalPlaylist)+1)+". "+"Home Menu"
-    print colored(OutputStr,"yellow")
+    if ParentMenuFunc:
+        OutputStr = str(len(FinalPlaylist)+1)+". "+"Previous Menu"
+        print colored(OutputStr, "green")
+        OutputStr1 = str(len(FinalPlaylist)+2)+". "+"Home Menu"
+        print colored(OutputStr1,"yellow")
+    else:
+        OutputStr1 = str(len(FinalPlaylist)+1)+". "+"Home Menu"
+        print colored(OutputStr1,"yellow")
     select = -1
 
     select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
     if select == len(FinalPlaylist)+1:
+        eval(*ParentMenuFunc)
+    elif select == len(FinalPlaylist)+2:
         home.ListMenu()
     elif (select > 0 & select <len(FinalPlaylist)+1):
         Play(FinalPlaylist[select][1])

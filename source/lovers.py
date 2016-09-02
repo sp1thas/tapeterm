@@ -31,21 +31,21 @@ def ListMenu():
 
 
 def CoffeeLovers():
-    playlist.FullList('CoffeeLovers')
+    playlist.FullList('CoffeeLovers','lovers.ListMenu()')
 
 def FoodLovers():
-    playlist.FullList('FoodLovers')
+    playlist.FullList('FoodLovers','lovers.ListMenu()')
 def AlcoholLovers():
-    playlist.FullList('AlcoholLovers')
+    playlist.FullList('AlcoholLovers','lovers.ListMenu()')
 def BookLovers():
-    playlist.FullList('BookLovers')
+    playlist.FullList('BookLovers','lovers.ListMenu()')
 def BedLovers():
-    playlist.FullList('BedLovers')
+    playlist.FullList('BedLovers','lovers.ListMenu()')
 def TravelLovers():
-    playlist.FullList('TravelLovers')
+    playlist.FullList('TravelLovers','lovers.ListMenu()')
 def RainLovers():
-    playlist.FullList('RainLovers')
+    playlist.FullList('RainLovers','lovers.ListMenu()')
 def SeaLovers():
-    playlist.FullList('SeaLovers')
-def SunLovers(arg):
-    playlist.FullList('SunLovers')
+    playlist.FullList('SeaLovers','lovers.ListMenu()')
+def SunLovers():
+    playlist.FullList('SunLovers','lovers.ListMenu()')
