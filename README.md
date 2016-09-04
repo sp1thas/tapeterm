@@ -8,7 +8,7 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 ---
 
-## Prerequirements 
+## Prerequirements
 
 ### Auto Installation - Build and Run
 
@@ -32,6 +32,12 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 
 ### Python Modules
+
+* [termcolor](https://pypi.python.org/pypi/termcolor)
+
+  * Installation
+    `sudo pip install termcolor`
+
 
 * [menus](https://pypi.python.org/pypi/Menus)
 
