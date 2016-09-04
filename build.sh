@@ -17,7 +17,7 @@ OS=$(lsb_release -si)
       echo "We can't install dependencies packages"
     fi
     clear
-    sudo pip install menus
+    sudo pip install menus termcolor
     sudo pip3 install mpsyt
     clear
     mpsyt set player mpv,q
