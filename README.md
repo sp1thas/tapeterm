@@ -10,7 +10,17 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 ## Prerequirements
 
-## [MPV](https://mpv.io/)
+### Auto Installation - Build and Run
+
+`git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
+
+`chmod -X build.sh`
+
+`sudo sh build.sh`
+
+### Manual Installation
+
+### [MPV](https://mpv.io/)
 
 * Installation:
   * **Debian\/Ubuntu** based:
@@ -22,6 +32,12 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 
 ### Python Modules
+
+* [termcolor](https://pypi.python.org/pypi/termcolor)
+
+  * Installation
+    `sudo pip install termcolor`
+
 
 * [menus](https://pypi.python.org/pypi/Menus)
 
@@ -35,7 +51,7 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
     `sudo pip3 install mps-youtube`
 
 
-## Installation
+## 
 
 `git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
 

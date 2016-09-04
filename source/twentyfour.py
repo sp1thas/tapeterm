@@ -27,10 +27,10 @@ def ListMenu():
     CurrentMenu.open()
 
 def Morning():
-    playlist.FullList('Morning')
+    playlist.FullList('Morning', 'twentyfour.ListMenu()')
 def Noon():
-    playlist.FullList('Noon')
+    playlist.FullList('Noon', 'twentyfour.ListMenu()')
 def AfterNoon():
-    playlist.FullList('AfterNoon')
+    playlist.FullList('AfterNoon', 'twentyfour.ListMenu()')
 def Night():
-    playlist.FullList('Night')
+    playlist.FullList('Night', 'twentyfour.ListMenu()')

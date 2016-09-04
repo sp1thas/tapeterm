@@ -39,7 +39,7 @@ def ListMenu():
 def kalokairines():
     pass
 def Activity():
-    playlist.FullList('Activity')
+    playlist.FullList('Activity','mood.ListMenu')
 def Days():
     title = "Μέρες"
     DaysMenu = menu.Menu(title)
@@ -51,25 +51,26 @@ def Days():
                 {"name":"Παρασκευή","function":Friday},
                 {"name":"Σάββατο","function":Saturday},
                 {"name":"Κυριακή","function":ksena.world},
+                {"name":colored("Previous Menu","green"),"function":ListMenu},
                 {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
                 {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     DaysMenu.addOptions(options)
     DaysMenu.open()
 def Monday():
-    playlist.FullList('Monday')
+    playlist.FullList('Monday','categories.Days()')
 def Tuesday():
-    playlist.FullList('Tuesday')
+    playlist.FullList('Tuesday','categories.Days()')
 def Wednesday():
-    playlist.FullList('Wednesday')
+    playlist.FullList('Wednesday','categories.Days()')
 def Thursday():
-    playlist.FullList('Thursday')
-def Friday(arg):
-    playlist.FullList('Friday')
+    playlist.FullList('Thursday','categories.Days()')
+def Friday():
+    playlist.FullList('Friday','categories.Days()')
 def Saturday():
-    playlist.FullList('Saturday')
+    playlist.FullList('Saturday','categories.Days()')
 def Sunday():
-    playlist.FullList('Sunday')
+    playlist.FullList('Sunday','categories.Days()')
 def mousika_eidi():
     title = "Μουσικά Είδη"
     MouikaEidiMenu = menu.Menu(title)
@@ -95,6 +96,7 @@ def mousika_eidi():
                 # {"name":"Παιδικές","function":Paidikes},
                 # {"name":"Θεματικές","function":Thematic},
                 # {"name":"Αφιερώματα","function":Afieromata}
+                {"name":colored("Previous Menu","green"),"function":categories.ListMenu},
                 {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
                 {"name":colored("Έξοδος", "red"),"function":exit.exit}
 
@@ -104,10 +106,10 @@ def mousika_eidi():
     MouikaEidiMenu.open()
 
 def HipTripHop():
-    playlist.FullList('HipTripHop')
+    playlist.FullList('HipTripHop','categories.Days()')
 
 def Reggae():
-    playlist.FullList('Reggae')
+    playlist.FullList('Reggae','categories.Days()')
 def Ambient():
     pass
 def Mainstream():
