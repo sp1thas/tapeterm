@@ -34,40 +34,40 @@ def ListMenu():
 
 # Δημοφιλείς >> 1
 def popular():
-    playlist.FullList('Popular')
+    playlist.FullList('Popular', 'ksena.ListMenu()')
 
 # Ροκ >> 2
 def rock():
-    playlist.FullList('Rock')
+    playlist.FullList('Rock', 'ksena.ListMenu()')
 
 # Τζαζ >> 3
 def jazz():
-    playlist.FullList('Jazz')
+    playlist.FullList('Jazz', 'ksena.ListMenu()')
 
 # Ηλεκτρονικές >> 4
 def electro():
-    playlist.FullList('Electro')
+    playlist.FullList('Electro', 'ksena.ListMenu()')
 
 # Alternative/Indie >> 5
 def alternative_indie():
-    playlist.FullList('AlternativeIndie')
+    playlist.FullList('AlternativeIndie', 'ksena.ListMenu()')
 
 # World >> 6
 def world():
-    playlist.FullList('World')
+    playlist.FullList('World', 'ksena.ListMenu()')
 
 # Βιντατζ >> 7
 def vintage():
-    playlist.FullList('Vintage')
+    playlist.FullList('Vintage', 'ksena.ListMenu()')
 
 # Διασκευές/Remixes >> 8
 def remixes():
-    playlist.FullList('Remixes')
+    playlist.FullList('Remixes', 'ksena.ListMenu()')
 
 # Ορχηστρικές >> 9
 def orchestral():
-    playlist.FullList('Orchestral')
+    playlist.FullList('Orchestral', 'ksena.ListMenu()')
 
 # Ακουστικές >> 10
 def acoustic():
-    playlist.FullList('Acoustic')
+    playlist.FullList('Acoustic', 'ksena.ListMenu()')

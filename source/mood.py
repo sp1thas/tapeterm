@@ -31,16 +31,16 @@ def ListMenu():
 
 
 def xaroumenes():
-    playlist.FullList('Xaroumenes')
+    playlist.FullList('Xaroumenes','mood.ListMenu')
 
 def xalarwtikes():
-    playlist.FullList('Xalarwtikes')
+    playlist.FullList('Xalarwtikes','mood.ListMenu')
 
 def melagxolikes():
-    playlist.FullList('Melagxolikes')
+    playlist.FullList('Melagxolikes','mood.ListMenu')
 
 def reading():
-    playlist.FullList('Reading')
+    playlist.FullList('Reading','mood.ListMenu')
 
 def sexy():
     pass
