@@ -46,7 +46,6 @@ def TravelLovers():
 def RainLovers():
     playlist.FullList('RainLovers','lovers.ListMenu()')
 def SeaLovers():
-<<<<<<< HEAD
     playlist.FullList('SeaLovers','lovers.ListMenu()')
 def SunLovers():
     playlist.FullList('SunLovers','lovers.ListMenu()')
