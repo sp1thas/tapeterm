@@ -49,8 +49,5 @@ def SeaLovers():
     playlist.FullList('SeaLovers','lovers.ListMenu()')
 def SunLovers():
     playlist.FullList('SunLovers','lovers.ListMenu()')
-=======
-    playlist.FullList('SeaLovers')
-def SunLovers():
-    playlist.FullList('SunLovers')
->>>>>>> 843615b6c9570c5b4a35849b0e1f4c66ba11a065
+def SeaLovers():
+    playlist.FullList('SeaLovers', 'Lovers.ListMenu')
