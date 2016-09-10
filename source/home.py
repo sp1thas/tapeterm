@@ -17,7 +17,7 @@ def ListMenu():
     MainMenu = menu.Menu(title)
     options =   [
                     {"name":"Ξένα","function":ksena.ListMenu},
-                    #{"name":"Ελληνικά","function":greek.menu},
+                    {"name":"Ελληνικά","function":greek.ListMenu},
                     {"name":"Κατηγορίες","function":categories.ListMenu},
                     {"name":"Διάθεση","function":mood.ListMenu},
                     {"name":"24ωρο","function":twentyfour.ListMenu},

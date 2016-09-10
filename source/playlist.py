@@ -11,7 +11,7 @@ __email__ = "sp1thas@autistici.org"
 
 from termcolor import colored
 from subprocess import call
-import AllPlaylists, menu, home,exit, time, ksena, categories, lovers, mood, twentyfour
+import AllPlaylists, menu, home,exit, time, ksena, categories, lovers, mood, twentyfour, greek
 
 '''
     FullList returns a dict.

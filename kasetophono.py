@@ -7,7 +7,7 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 from subprocess import call
-from source import *
+from source import start, home
 
 start.logo()
 home.ListMenu()
