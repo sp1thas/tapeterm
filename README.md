@@ -1,4 +1,4 @@
-# [Κασετόφωνο](http://www.kasetophono.com) στο Τερματικό
+# [Κασετόφωνο](http://www.kasetophono.com) στο Τερματικό {#overview}
 
 python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
 
@@ -10,7 +10,7 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 ## Prerequirements
 
-### Auto Installation - Build and Run
+### Auto Installation - Build and Run {#autoinstallation}
 
 `git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
 
@@ -18,7 +18,36 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 `sudo sh build.sh`
 
-### Manual Installation
+### Manual Installation {#manualinstallation}
+
+In few commands:
+
+* **Debian\/Ubuntu** based:
+
+
+`[sudo] apt-get install mpv python2 python2-pip python3-pip`
+
+`[sudo] pip3 install mps-youtube`
+
+`[sudo] pip2 install termcolor menu `
+
+* **Fedora** based:
+
+
+`[sudo] yum install mpv python2 python2-pip python3-pip`
+
+`[sudo] pip3 install mps-youtube`
+
+`[sudo] pip2 install termcolor menu`
+
+* **Arch** based
+
+
+`[sudo] pacman -S install mpv python2 python2-pip python3-pip`
+
+`[sudo] pip3 install mps-youtube`
+
+`[sudo] pip2 install termcolor menu`
 
 ### [MPV](https://mpv.io/)
 
@@ -31,18 +60,41 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
     `[sudo] pacman -S mpv`
 
 
+Python
+
+* Installation:
+
+  * **Debian\/Ubuntu** based:
+    `[sudo] apt-get install python2`
+  * **Fedora** based:
+    `[sudo] yum install python2`
+  * Arch based:
+    `[sudo] pacman -S python2`
+
+
+PIP
+* Installation
+
+  * **Debian\/Ubuntu** based:
+    `[sudo] apt-get install python2-pip python3-pip`
+  * **Fedora** based:
+    `[sudo] yum install python2-pip python3-pip`
+  * **Arch** based:
+    `[sudo] pacman -S python2-pip python3-pip`
+
+
 ### Python Modules
 
 * [termcolor](https://pypi.python.org/pypi/termcolor)
 
   * Installation
-    `sudo pip install termcolor`
+    `sudo pip2 install termcolor`
 
 
 * [menus](https://pypi.python.org/pypi/Menus)
 
   * Installation:
-    `sudo pip install menus`
+    `sudo pip2 install menu`
 
 
 * [mps-youtube](https://github.com/mps-youtube/)
@@ -55,7 +107,7 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 `git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
 
-## Usage
+## Usage {#usage}
 
 just run kasetophono.py
 
@@ -77,7 +129,5 @@ just run kasetophono.py
 
 ![](/assets/python-playlist.png)
 
-## Playing
 
-![](/assets/python-playing.png)
 
