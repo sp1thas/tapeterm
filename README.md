@@ -1,4 +1,4 @@
-# [Κασετόφωνο](http://www.kasetophono.com) στο Τερματικό {#overview}
+# [Κασετόφωνο](http://www.kasetophono.com) στο Τερματικό
 
 python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
 
@@ -10,7 +10,7 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 ## Prerequirements
 
-### Auto Installation - Build and Run {#autoinstallation}
+### Auto Installation - Build and Run
 
 `git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
 
@@ -18,21 +18,19 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 `sudo sh build.sh`
 
-### Manual Installation {#manualinstallation}
+### Manual Installation
 
 In few commands:
 
 * **Debian\/Ubuntu** based:
 
-
 `[sudo] apt-get install mpv python2 python2-pip python3-pip`
 
 `[sudo] pip3 install mps-youtube`
 
-`[sudo] pip2 install termcolor menu `
+`[sudo] pip2 install termcolor menu`
 
 * **Fedora** based:
-
 
 `[sudo] yum install mpv python2 python2-pip python3-pip`
 
@@ -41,7 +39,6 @@ In few commands:
 `[sudo] pip2 install termcolor menu`
 
 * **Arch** based
-
 
 `[sudo] pacman -S install mpv python2 python2-pip python3-pip`
 
@@ -73,6 +70,7 @@ Python
 
 
 PIP
+
 * Installation
 
   * **Debian\/Ubuntu** based:
@@ -107,7 +105,7 @@ PIP
 
 `git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
 
-## Usage {#usage}
+## Usage
 
 just run kasetophono.py
 
@@ -128,6 +126,4 @@ just run kasetophono.py
 ## Playlists
 
 ![](/assets/python-playlist.png)
-
-
 
