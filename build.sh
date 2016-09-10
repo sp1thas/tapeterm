@@ -5,20 +5,20 @@ OS=$(lsb_release -si)
 
     if [  $OS = "Fedora" ]; then
 
-   		sudo yum install python-pip python3-pip mvp
+   		sudo yum install python2-pip python3-pip mvp
 
     elif [ $OS = "Ubuntu" ] || [ $OS = "Debian" ]; then
 
-  		sudo apt-get install python-pip python3-pip mvp
+  		sudo apt-get install python2-pip python3-pip mvp
 
     elif [$OS = "Arch"]; then
-      sudo pacman -S python-pip python3-pip
+      sudo pacman -S python-pip2 python3-pip mpv
     else
       echo "We can't install dependencies packages"
     fi
     clear
-    sudo pip install menus termcolor
-    sudo pip3 install mpsyt
+    sudo pip2 install menu termcolor
+    sudo pip3 install mps-youtube
     clear
     mpsyt set player mpv,q
     clear
