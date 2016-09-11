@@ -19,7 +19,7 @@ def ListMenu():
 
 {"name":"Έντεχνες","function":Entexnes},
 {"name":"Λαικές/Ρεμπέτικες","function":LaikesRempetikes},
-# {"name":"Όμορφες","function":Omorfes},
+{"name":"Όμορφες","function":Omorfes},
 # {"name":"Αγγλόφωνες/Αλτέρνατιβ","function":AggloAltern},
 # {"name":"Θεματικές","function":Thematikes},
 # {"name":"Βίντατζ","function":GreekVintage},
@@ -40,7 +40,7 @@ def LaikesRempetikes():
     playlist.FullList('LaikesRempetikes', 'greek.ListMenu()')
 
 def Omorfes():
-    playlist.FullList('LaikesRempetikes', 'greek.ListMenu()')
+    playlist.FullList('Omorfes', 'greek.ListMenu()')
 
 def AggloAltern():
     playlist.FullList('AggloAltern', 'greek.ListMenu()')
