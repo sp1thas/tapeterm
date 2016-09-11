@@ -18,7 +18,7 @@ def ListMenu():
     options =   [
 
 {"name":"Έντεχνες","function":Entexnes},
-# {"name":"Λαικές/Ρεμπέτικες","function":LaikesRempetikes},
+{"name":"Λαικές/Ρεμπέτικες","function":LaikesRempetikes},
 # {"name":"Όμορφες","function":Omorfes},
 # {"name":"Αγγλόφωνες/Αλτέρνατιβ","function":AggloAltern},
 # {"name":"Θεματικές","function":Thematikes},
