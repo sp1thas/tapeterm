@@ -101,7 +101,7 @@ PIP
     `sudo pip3 install mps-youtube`
 
 
-## 
+##
 
 `git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
 
@@ -109,7 +109,7 @@ PIP
 
 just run kasetophono.py
 
-`python kasetophono.py`
+`python2 kasetophono.py`
 
 ## Start Page
 
@@ -126,4 +126,3 @@ just run kasetophono.py
 ## Playlists
 
 ![](/assets/python-playlist.png)
-
