@@ -20,7 +20,7 @@ def ListMenu():
 {"name":"Έντεχνες","function":Entexnes},
 {"name":"Λαικές/Ρεμπέτικες","function":LaikesRempetikes},
 {"name":"Όμορφες","function":Omorfes},
-# {"name":"Αγγλόφωνες/Αλτέρνατιβ","function":AggloAltern},
+{"name":"Αγγλόφωνες/Αλτέρνατιβ","function":AggloAltern},
 # {"name":"Θεματικές","function":Thematikes},
 # {"name":"Βίντατζ","function":GreekVintage},
 # {"name":"Αφιερώματα","function":Afieromata},
