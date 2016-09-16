@@ -22,10 +22,10 @@ def ListMenu():
 {"name":"Όμορφες","function":Omorfes},
 {"name":"Αγγλόφωνες/Αλτέρνατιβ","function":AggloAltern},
 # {"name":"Θεματικές","function":Thematikes},
-# {"name":"Βίντατζ","function":GreekVintage},
-# {"name":"Αφιερώματα","function":Afieromata},
-# {"name":"Παραδοσιακές","function":Paradosiakes},
-# {"name":"Παιδικές","function":Paidikes},
+{"name":"Βίντατζ","function":GreekVintage},
+{"name":"Αφιερώματα","function":Afieromata},
+{"name":"Παραδοσιακές","function":Paradosiakes},
+{"name":"Παιδικές","function":Paidikes},
 {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
 {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
