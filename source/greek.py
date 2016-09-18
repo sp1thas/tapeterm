@@ -46,7 +46,15 @@ def AggloAltern():
     playlist.FullList('AggloAltern', 'greek.ListMenu()')
 
 def Thematikes():
-    playlist.FullList('Thematikes', 'greek.ListMenu()')
+    pass
+    # ThematikesMenu = menu.Menu('Θεματικές')
+    # options = [
+    #     {"name":"","function":},
+    #     {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+    #     {"name":colored("Έξοδος", "red"),"function":exit.exit}
+    # ]
+    # ThematikesMenu.addOptions(options)
+    # ThematikesMenu.open()
 
 def GreekVintage():
     playlist.FullList('GreekVintage', 'greek.ListMenu()')

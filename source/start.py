@@ -15,6 +15,7 @@ def SetMPV():
     call(["clear"])
 
 def logo():
+    call(["clear"])
     logo=   '                                   _                            \n'\
             '                                  | |                           \n'\
             '   _  ____  ______ ___ ___ ___   _| |_   __   __  _  _____      \n'\
