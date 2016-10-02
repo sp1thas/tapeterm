@@ -16,13 +16,13 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 `chmod -X build.sh`
 
-`sudo sh build.sh`
+`[sudo] sh build.sh`
 
 ### Manual Installation
 
 In few commands:
 
-* **Debian\/Ubuntu** based:
+* **Debian/Ubuntu** based:
 
 `[sudo] apt-get install mpv python2 python2-pip python3-pip`
 
@@ -49,7 +49,7 @@ In few commands:
 ### [MPV](https://mpv.io/)
 
 * Installation:
-  * **Debian\/Ubuntu** based:
+  * **Debian/Ubuntu** based:
     `[sudo] apt-get install mpv`
   * **Fedora** based:
     `[sudo] yum install mpv`
@@ -100,8 +100,6 @@ PIP
   * Installation:
     `sudo pip3 install mps-youtube`
 
-
-##
 
 `git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
 
