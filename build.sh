@@ -5,11 +5,11 @@ OS=$(lsb_release -si)
 
     if [  $OS = "Fedora" ]; then
 
-   		sudo yum install python2-pip python3-pip mvp
+   		sudo yum install python2-pip python3-pip mpv
 
     elif [ $OS = "Ubuntu" ] || [ $OS = "Debian" ]; then
 
-  		sudo apt-get install python2-pip python3-pip mvp
+  		sudo apt-get install python2-pip python3-pip mpv
 
     elif [$OS = "Arch"]; then
       sudo pacman -S python-pip2 python3-pip mpv
