@@ -9,7 +9,8 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-import menu
+import menu, playlist, home, exit
+from termcolor import colored
 
 def menu():
-    pass
+    playlist.FullList('DJ','greek.ListMenu()')

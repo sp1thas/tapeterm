@@ -24,7 +24,7 @@ def ListMenu():
                     {"name":"Lovers","function":lovers.ListMenu},
                     #{"name":"Events","function":events.menu},
                     #{"name":"Ρουλέτα","function":roulette.menu},
-                    #{"name":"DJ","function":dj.menu},
+                    {"name":"DJ","function":dj.menu},
                     {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     MainMenu.addOptions(options)

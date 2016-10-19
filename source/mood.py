@@ -20,8 +20,8 @@ def ListMenu():
                     {"name":"Χαλαρωτικές","function":xalarwtikes},
                     {"name":"Μελαγχολικές","function":melagxolikes},
                     {"name":"Διάβασμα","function":reading},
-                    #{"name":"Sexy","function":sexy},
-                    #{"name":"Ερωτικές","function":erotic},
+                    {"name":"Sexy","function":sexy},
+                    {"name":"Ερωτικές","function":erotic},
                     #{"name":"Party","function":party}
                     {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
                     {"name":colored("Έξοδος", "red"),"function":exit.exit}
@@ -43,9 +43,9 @@ def reading():
     playlist.FullList('Reading','mood.ListMenu')
 
 def sexy():
-    pass
+    playlist.FullList('Sexy','mood.ListMenu')
 
 def erotic():
-    pass
+    playlist.FullList('Erotic','mood.ListMenu')
 def party():
     pass

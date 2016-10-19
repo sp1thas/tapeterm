@@ -12,7 +12,7 @@ OS=$(lsb_release -si)
   		sudo apt-get install python2-pip python3-pip mpv
 
     elif [$OS = "Arch"]; then
-      sudo pacman -S python-pip2 python3-pip mpv
+      sudo pacman -S python2-pip python3-pip mpv
     else
       echo "We can't install dependencies packages"
     fi
