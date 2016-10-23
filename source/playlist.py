@@ -34,22 +34,21 @@ def FullList(category, *ParentMenuFunc):
 
     for i in FinalPlaylist:
         counter += 1
-        if counter % 2 == 0:
-            OutputStr = str(counter)+". "+FinalPlaylist[i][0]
-            print colored(OutputStr, "magenta")
-            time.sleep(0.1)
-        else:
-            OutputStr = str(counter)+". "+FinalPlaylist[i][0]
-            print OutputStr
-            time.sleep(0.1)
+        OutputStr = str(counter)+". "+FinalPlaylist[i][0]
+        div = len(OutputStr)+2
+        print " ",colored("—"*div, "red"),"\n",colored("|", "red"),OutputStr
+        time.sleep(0.1)
     if ParentMenuFunc:
         OutputStr = str(len(FinalPlaylist)+1)+". "+"Previous Menu"
-        print colored(OutputStr, "green")
+        div = len(OutputStr) + 2
+        print " ",colored("—"*div, "red"),"\n",colored("|", "red"),colored(OutputStr, "green")
         OutputStr1 = str(len(FinalPlaylist)+2)+". "+"Home Menu"
-        print colored(OutputStr1,"yellow")
+        div = len(OutputStr1) + 2
+        print " ",colored("—"*div, "red"),"\n",colored("|", "red"), colored(OutputStr1,"yellow"),"\n ","—"*div
     else:
         OutputStr1 = str(len(FinalPlaylist)+1)+". "+"Home Menu"
-        print colored(OutputStr1,"yellow")
+        div = len(OutputStr1) + 2
+        print " ",colored("—"*div, "red"),"\n",colored("|", "red"), colored(OutputStr1,"yellow"),"\n ","—"*div
     select = -1
 
     select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
