@@ -48,4 +48,4 @@ def sexy():
 def erotic():
     playlist.FullList('Erotic','mood.ListMenu')
 def party():
-    pass
+    playlist.FullList('Party','mood.ListMenu')
