@@ -96,7 +96,7 @@ def mousika_eidi():
                 # {"name":"Παιδικές","function":Paidikes},
                 # {"name":"Θεματικές","function":Thematic},
                 # {"name":"Αφιερώματα","function":Afieromata}
-                {"name":colored("Previous Menu","green"),"function":categories.ListMenu},
+                {"name":colored("Previous Menu","green"),"function":ListMenu},
                 {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
                 {"name":colored("Έξοδος", "red"),"function":exit.exit}
 
