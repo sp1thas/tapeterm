@@ -16,69 +16,73 @@ python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube
 
 `chmod -X build.sh`
 
-`[sudo] sh build.sh`
+then run as root:
+
+`sh build.sh`
 
 ### Manual Installation
 
-In few commands:
+run as root:
 
-* **Debian/Ubuntu** based:
+* **Debian\/Ubuntu** based:
 
-`[sudo] apt-get install mpv python2 python2-pip python3-pip`
+`apt-get install mpv python2 python2-pip python3-pip`
 
-`[sudo] pip3 install mps-youtube`
+`pip3 install mps-youtube`
 
-`[sudo] pip2 install termcolor menu`
+`pip2 install termcolor menu`
 
 * **Fedora** based:
 
-`[sudo] yum install mpv python2 python2-pip python3-pip`
+`yum install mpv python2 python2-pip python3-pip`
 
-`[sudo] pip3 install mps-youtube`
+`pip3 install mps-youtube`
 
-`[sudo] pip2 install termcolor menu`
+`pip2 install termcolor menu`
 
 * **Arch** based
 
-`[sudo] pacman -S install mpv python2 python2-pip python3-pip`
+`pacman -S install mpv python2 python2-pip python3-pip`
 
-`[sudo] pip3 install mps-youtube`
+`pip3 install mps-youtube`
 
-`[sudo] pip2 install termcolor menu`
+`pip2 install termcolor menu`
 
 ### [MPV](https://mpv.io/)
 
 * Installation:
-  * **Debian/Ubuntu** based:
-    `[sudo] apt-get install mpv`
+  run as root:
+  * **Debian\/Ubuntu** based:
+    `apt-get install mpv`
   * **Fedora** based:
-    `[sudo] yum install mpv`
+    `yum install mpv`
   * **Arch** based:
-    `[sudo] pacman -S mpv`
+    `pacman -S mpv`
 
 
-Python
+### Python
 
 * Installation:
 
+  run as root
   * **Debian\/Ubuntu** based:
-    `[sudo] apt-get install python2`
+    `apt-get install python2`
   * **Fedora** based:
-    `[sudo] yum install python2`
+    `yum install python2`
   * Arch based:
-    `[sudo] pacman -S python2`
+    `pacman -S python2`
 
 
-PIP
+### PIP \(Python Package Management\)
 
 * Installation
 
   * **Debian\/Ubuntu** based:
-    `[sudo] apt-get install python2-pip python3-pip`
+    `apt-get install python2-pip python3-pip`
   * **Fedora** based:
-    `[sudo] yum install python2-pip python3-pip`
+    `yum install python2-pip python3-pip`
   * **Arch** based:
-    `[sudo] pacman -S python2-pip python3-pip`
+    `pacman -S python2-pip python3-pip`
 
 
 ### Python Modules
@@ -124,3 +128,4 @@ just run kasetophono.py
 ## Playlists
 
 ![](/assets/python-playlist.png)
+
