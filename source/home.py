@@ -10,7 +10,7 @@ __email__ = "sp1thas@autistici.org"
 #   ===================================
 
 import menu, sys, exit
-import ksena, greek, categories, mood, alternative_indie, lovers, roulette, dj, twentyfour
+import ksena, greek, categories, mood, alternative_indie, lovers, roulette, dj, twentyfour, playlist
 from termcolor import colored
 def ListMenu():
     title = 'Κεντρικό Μενού'
@@ -25,7 +25,10 @@ def ListMenu():
                     #{"name":"Events","function":events.menu},
                     #{"name":"Ρουλέτα","function":roulette.menu},
                     {"name":"DJ","function":dj.menu},
+                    {"name":"Κασέτες του μήνα (Month's tape)","function":month},
                     {"name":colored("Έξοδος", "red"),"function":exit.exit}
                 ]
     MainMenu.addOptions(options)
     MainMenu.open()
+def month():
+    playlist.FullList('Month','home.ListMenu()')
