@@ -1,7 +1,8 @@
-# [Κασετόφωνο](http://www.kasetophono.com) στο Τερματικό
+# Kasetophono in Terminal
+## [Κασετόφωνο](http://www.kasetophono.com) στο Τερματικό
 
 python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
-
+---
 Παίξε τις playlist απο το κασετόφωνο στο τερματικό σου. Προς το παρόν είναι είναι λίγες οι playlist και οι κατηγορίες.
 
 με την πάροδο του χρόνου θα προσθέτονται και άλλες.
@@ -128,4 +129,3 @@ just run kasetophono.py
 ## Playlists
 
 ![](/assets/python-playlist.png)
-
