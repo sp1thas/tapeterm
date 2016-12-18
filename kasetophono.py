@@ -7,7 +7,10 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 from subprocess import call
-from source import start, home
+from source import start, home,lang
 
-start.logo()
+language_input = start.logo()
+
+lang.set_lang(language_input)
+
 home.ListMenu()
