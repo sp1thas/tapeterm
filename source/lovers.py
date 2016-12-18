@@ -9,7 +9,7 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-import menu, exit, playlist, home
+import menu, exit, playlist, home, lang
 from termcolor import colored
 
 def ListMenu():

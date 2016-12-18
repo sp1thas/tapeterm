@@ -10,6 +10,7 @@ __email__ = "sp1thas@autistici.org"
 #   ===================================
 from subprocess import call
 from termcolor import colored
+import lang
 def SetMPV():
     call(["mpsyt", "set", "player", "mpv,q"])
     call(["clear"])
@@ -34,5 +35,5 @@ def logo():
     print colored(logo,"magenta")
     print colored(logo1,"cyan")
     print colored(logo2,"blue")
-    tmp = raw_input('Πληκτρολογίστε οτιδήποτε για να συνεχίσετε!')
-    del tmp
+    tmp = input('Choose language: "1" for English or "2" for Greek\n>>> ')
+    return tmp

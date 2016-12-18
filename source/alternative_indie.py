@@ -9,7 +9,7 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-import menu, exit
+import menu, exit, lang
 
 def menu():
     pass

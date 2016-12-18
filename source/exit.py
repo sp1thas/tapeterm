@@ -9,7 +9,7 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 from subprocess import call
-import sys
+import sys, lang
 
 def exit():
     call(["clear"])

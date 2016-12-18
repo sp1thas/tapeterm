@@ -10,24 +10,36 @@ __email__ = "sp1thas@autistici.org"
 #   ===================================
 
 from termcolor import colored
-import menu
+import menu, lang
 import playlist, home, exit, categories
+from lang import curr_lang
 
 def ListMenu():
-    title = 'Ξένα'
+    if not curr_lang():
+        title = 'Ξένα'
+        options =   [
+        {"name":"Δημοφιλείς","function":popular}, {"name":"Ροκ","function":rock},
+        {"name":"Τζαζ","function":jazz}, {"name":"Ηλεκτρονικές","function":electro},
+        {"name":"Alternative/Indie","function":alternative_indie}, {"name":"World","function":world},
+        {"name":"Βίντατζ","function":vintage}, {"name":"Διασκευές/Remixes","function":remixes},
+        {"name":"Ορχηστρικές","function":orchestral}, {"name":"Ακουστικές","function":acoustic},
+        {"name":"More","function":categories.ListMenu},
+        {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+        {"name":colored("Έξοδος", "red"),"function":exit.exit}
+        ]
+    elif curr_lang():
+        title = 'International'
+        options =   [
+        {"name":"Popular","function":popular}, {"name":"Ροκ","function":rock},
+        {"name":"Jazz","function":jazz}, {"name":"Electro","function":electro},
+        {"name":"Alternative/Indie","function":alternative_indie}, {"name":"World","function":world},
+        {"name":"Vintage","function":vintage}, {"name":"Remixes","function":remixes},
+        {"name":"Orchestral","function":orchestral}, {"name":"Acoustic","function":acoustic},
+        {"name":"More","function":categories.ListMenu},
+        {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+        {"name":colored("Exit", "red"),"function":exit.exit}
+        ]
     KsenaMenu = menu.Menu(title)
-    options =   [
-
-{"name":"Δημοφιλείς","function":popular}, {"name":"Ροκ","function":rock},
-{"name":"Τζαζ","function":jazz}, {"name":"Ηλεκτρονικές","function":electro},
-{"name":"Alternative/Indie","function":alternative_indie}, {"name":"World","function":world},
-{"name":"Βίντατζ","function":vintage}, {"name":"Διασκευές/Remixes","function":remixes},
-{"name":"Ορχηστρικές","function":orchestral}, {"name":"Ακουστικές","function":acoustic},
-{"name":"More","function":categories.ListMenu},
-{"name":colored("Home Menu","yellow"),"function":home.ListMenu},
-{"name":colored("Έξοδος", "red"),"function":exit.exit}
-                ]
-
     KsenaMenu.addOptions(options)
     KsenaMenu.open()
 

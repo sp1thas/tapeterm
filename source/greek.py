@@ -9,27 +9,44 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-import menu, playlist, home, exit
+import menu, playlist, home, exit, lang
 from termcolor import colored
-
+from lang import curr_lang
 def ListMenu():
-    title = 'Ελληνικά'
+    if not curr_lang():
+        title = 'Ελληνικά'
+
+        options =   [
+                    {"name":"Έντεχνες","function":Entexnes},
+                    {"name":"Λαικές/Ρεμπέτικες","function":LaikesRempetikes},
+                    {"name":"Όμορφες","function":Omorfes},
+                    {"name":"Αγγλόφωνες/Αλτέρνατιβ","function":AggloAltern},
+                    # {"name":"Θεματικές","function":Thematikes},
+                    {"name":"Βίντατζ","function":GreekVintage},
+                    {"name":"Αφιερώματα","function":Afieromata},
+                    {"name":"Παραδοσιακές","function":Paradosiakes},
+                    {"name":"Παιδικές","function":Paidikes},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                    {"name":colored("Έξοδος", "red"),"function":exit.exit}
+                    ]
+    elif curr_lang():
+        title = 'Greek'
+
+        options =   [
+                    {"name":"Entexno","function":Entexnes},
+                    {"name":"Laiko/Rempetiko","function":LaikesRempetikes},
+                    {"name":"Beatifull","function":Omorfes},
+                    {"name":"Anglophone/Alternative","function":AggloAltern},
+                    # {"name":"Θεματικές","function":Thematikes},
+                    {"name":"Vintage","function":GreekVintage},
+                    {"name":"Specials","function":Afieromata},
+                    {"name":"Traditional","function":Paradosiakes},
+                    {"name":"Children","function":Paidikes},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                    {"name":colored("Exit", "red"),"function":exit.exit}
+                    ]
+
     GreekMenu = menu.Menu(title)
-    options =   [
-
-{"name":"Έντεχνες","function":Entexnes},
-{"name":"Λαικές/Ρεμπέτικες","function":LaikesRempetikes},
-{"name":"Όμορφες","function":Omorfes},
-{"name":"Αγγλόφωνες/Αλτέρνατιβ","function":AggloAltern},
-# {"name":"Θεματικές","function":Thematikes},
-{"name":"Βίντατζ","function":GreekVintage},
-{"name":"Αφιερώματα","function":Afieromata},
-{"name":"Παραδοσιακές","function":Paradosiakes},
-{"name":"Παιδικές","function":Paidikes},
-{"name":colored("Home Menu","yellow"),"function":home.ListMenu},
-{"name":colored("Έξοδος", "red"),"function":exit.exit}
-                ]
-
     GreekMenu.addOptions(options)
     GreekMenu.open()
 

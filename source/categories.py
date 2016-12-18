@@ -12,27 +12,46 @@ __email__ = "sp1thas@autistici.org"
 import menu, exit, lovers
 import playlist, home, mood, ksena, twentyfour
 from termcolor import colored
-
+from lang import curr_lang
 def ListMenu():
-    title = 'Ξένα'
-    CategoriesMenu = menu.Menu(title)
-    options =   [
+    if not curr_lang():
+        title = 'Ξένα'
+        options =   [
+                        #{"name":"Καλοκαιρινές","function":kalokairines},
+                        {"name":"24ωρο","function":twentyfour.ListMenu},
+                        {"name":"Διάθεση","function":mood.ListMenu},
+                        {"name":"Μουσικά Είδη","function":mousika_eidi},
+                        {"name":"Lovers","function":lovers.ListMenu},
+                        {"name":"Δραστηριότητα","function":Activity},
+                        {"name":"Μέρες","function":Days},
+                        #{"name":"Διασκευές/Remixes","function":remixes},
+                        #{"name":"Ορχηστρικές","function":orchestral},
+                        #{"name":"Ακουστικές","function":popular},
+                        #{"name":"More","function":rock},
+                        #{"name":"Home Menu", "function":home.Menu}
+                        {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                        {"name":colored("Έξοδος", "red"),"function":exit.exit}
+                    ]
+    elif curr_lang():
+        title = 'International'
+        options =   [
+                        #{"name":"Καλοκαιρινές","function":kalokairines},
+                        {"name":"TwentyFour","function":twentyfour.ListMenu},
+                        {"name":"Mood","function":mood.ListMenu},
+                        {"name":"Kind of Music","function":mousika_eidi},
+                        {"name":"Lovers","function":lovers.ListMenu},
+                        {"name":"Activities","function":Activity},
+                        {"name":"Days","function":Days},
+                        #{"name":"Διασκευές/Remixes","function":remixes},
+                        #{"name":"Ορχηστρικές","function":orchestral},
+                        #{"name":"Ακουστικές","function":popular},
+                        #{"name":"More","function":rock},
+                        #{"name":"Home Menu", "function":home.Menu}
+                        {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                        {"name":colored("Exit", "red"),"function":exit.exit}
+                    ]
 
-                    #{"name":"Καλοκαιρινές","function":kalokairines},
-                    {"name":"24ωρο","function":twentyfour.ListMenu},
-                    {"name":"Διάθεση","function":mood.ListMenu},
-                    {"name":"Μουσικά Είδη","function":mousika_eidi},
-                    {"name":"Lovers","function":lovers.ListMenu},
-                    {"name":"Δραστηριότητα","function":Activity},
-                    {"name":"Μέρες","function":Days},
-                    #{"name":"Διασκευές/Remixes","function":remixes},
-                    #{"name":"Ορχηστρικές","function":orchestral},
-                    #{"name":"Ακουστικές","function":popular},
-                    #{"name":"More","function":rock},
-                    #{"name":"Home Menu", "function":home.Menu}
-                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
-                    {"name":colored("Έξοδος", "red"),"function":exit.exit}
-                ]
+    CategoriesMenu = menu.Menu(title)
     CategoriesMenu.addOptions(options)
     CategoriesMenu.open()
 
@@ -41,20 +60,37 @@ def kalokairines():
 def Activity():
     playlist.FullList('Activity','mood.ListMenu')
 def Days():
-    title = "Μέρες"
+    if not curr_lang():
+        title = "Μέρες"
+
+        options = [
+                    {"name":"Δευτέρα","function":Monday},
+                    {"name":"Τρίτη","function":Tuesday},
+                    {"name":"Τετάρτη","function":Wednesday},
+                    {"name":"Πέμπτη","function":Thursday},
+                    {"name":"Παρασκευή","function":Friday},
+                    {"name":"Σάββατο","function":Saturday},
+                    {"name":"Κυριακή","function":ksena.world},
+                    {"name":colored("Previous Menu","green"),"function":ListMenu},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                    {"name":colored("Έξοδος", "red"),"function":exit.exit}
+                    ]
+    elif curr_lang():
+        titlle = "Days"
+
+        options = [
+                    {"name":"Monday","function":Monday},
+                    {"name":"Tuesday","function":Tuesday},
+                    {"name":"Wednesday","function":Wednesday},
+                    {"name":"Thursday","function":Thursday},
+                    {"name":"Friday","function":Friday},
+                    {"name":"Saturday","function":Saturday},
+                    {"name":"Sunday","function":ksena.world},
+                    {"name":colored("Previous Menu","green"),"function":ListMenu},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                    {"name":colored("Exit", "red"),"function":exit.exit}
+                    ]
     DaysMenu = menu.Menu(title)
-    options = [
-                {"name":"Δευτέρα","function":Monday},
-                {"name":"Τρίτη","function":Tuesday},
-                {"name":"Τετάρτη","function":Wednesday},
-                {"name":"Πέμπτη","function":Thursday},
-                {"name":"Παρασκευή","function":Friday},
-                {"name":"Σάββατο","function":Saturday},
-                {"name":"Κυριακή","function":ksena.world},
-                {"name":colored("Previous Menu","green"),"function":ListMenu},
-                {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
-                {"name":colored("Έξοδος", "red"),"function":exit.exit}
-                ]
     DaysMenu.addOptions(options)
     DaysMenu.open()
 def Monday():
@@ -72,36 +108,63 @@ def Saturday():
 def Sunday():
     playlist.FullList('Sunday','categories.Days()')
 def mousika_eidi():
-    title = "Μουσικά Είδη"
+    if not curr_lang():
+        title = "Μουσικά Είδη"
+        options = [
+                    {"name":"Ροκ","function":ksena.rock},
+                    {"name":"HipTripHop","function":HipTripHop},
+                    {"name":"Reggae","function":Reggae},
+                    {"name":"Τζαζ","function":ksena.jazz},
+                    {"name":"Ηλεκτρονικές","function":ksena.electro},
+                    {"name":"Alternative","function":ksena.alternative_indie},
+                    {"name":"World Music","function":ksena.world},
+                    {"name":"Βίντατζ","function":ksena.vintage},
+                    {"name":"Διασκευές","function":ksena.remixes},
+                    {"name":"Ορχηστρικές","function":ksena.orchestral},
+                    #{"name":"Beats","function":beats}
+
+                    #{"name":"Ambient","function":Ambient},
+                    #{"name":"Mainstream","function":Mainstream},
+                    #{"name":"Blues","function":Blues},
+                    # {"name":"Funk / Soul","function":FunkSoul},
+                    # {"name":"Swing","function":Swing},
+                    # {"name":"Soundtracks","function":Soundtracks},
+                    # {"name":"Παιδικές","function":Paidikes},
+                    # {"name":"Θεματικές","function":Thematic},
+                    # {"name":"Αφιερώματα","function":Afieromata}
+                    {"name":colored("Previous Menu","green"),"function":ListMenu},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                    {"name":colored("Έξοδος", "red"),"function":exit.exit}
+                ]
+    elif curr_lang():
+        title = "Kind of Music"
+        options = [
+                    {"name":"Rock","function":ksena.rock},
+                    {"name":"HipTripHop","function":HipTripHop},
+                    {"name":"Reggae","function":Reggae},
+                    {"name":"Jazz","function":ksena.jazz},
+                    {"name":"Electro","function":ksena.electro},
+                    {"name":"Alternative","function":ksena.alternative_indie},
+                    {"name":"World Music","function":ksena.world},
+                    {"name":"Vintage","function":ksena.vintage},
+                    {"name":"Remixes","function":ksena.remixes},
+                    {"name":"Orchestral","function":ksena.orchestral},
+                    #{"name":"Beats","function":beats}
+
+                    #{"name":"Ambient","function":Ambient},
+                    #{"name":"Mainstream","function":Mainstream},
+                    #{"name":"Blues","function":Blues},
+                    # {"name":"Funk / Soul","function":FunkSoul},
+                    # {"name":"Swing","function":Swing},
+                    # {"name":"Soundtracks","function":Soundtracks},
+                    # {"name":"Παιδικές","function":Paidikes},
+                    # {"name":"Θεματικές","function":Thematic},
+                    # {"name":"Αφιερώματα","function":Afieromata}
+                    {"name":colored("Previous Menu","green"),"function":ListMenu},
+                    {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
+                    {"name":colored("Exit", "red"),"function":exit.exit}
+                ]
     MouikaEidiMenu = menu.Menu(title)
-    options = [
-                {"name":"Ροκ","function":ksena.rock},
-                {"name":"HipTripHop","function":HipTripHop},
-                {"name":"Reggae","function":Reggae},
-                {"name":"Τζαζ","function":ksena.jazz},
-                {"name":"Ηλεκτρονικές","function":ksena.electro},
-                {"name":"Alternative","function":ksena.alternative_indie},
-                {"name":"World Music","function":ksena.world},
-                {"name":"Βίντατζ","function":ksena.vintage},
-                {"name":"Διασκευές","function":ksena.remixes},
-                {"name":"Ορχηστρικές","function":ksena.orchestral},
-                #{"name":"Beats","function":beats}
-
-                #{"name":"Ambient","function":Ambient},
-                #{"name":"Mainstream","function":Mainstream},
-                #{"name":"Blues","function":Blues},
-                # {"name":"Funk / Soul","function":FunkSoul},
-                # {"name":"Swing","function":Swing},
-                # {"name":"Soundtracks","function":Soundtracks},
-                # {"name":"Παιδικές","function":Paidikes},
-                # {"name":"Θεματικές","function":Thematic},
-                # {"name":"Αφιερώματα","function":Afieromata}
-                {"name":colored("Previous Menu","green"),"function":ListMenu},
-                {"name":colored("Home Menu","yellow"),"function":home.ListMenu},
-                {"name":colored("Έξοδος", "red"),"function":exit.exit}
-
-
-    ]
     MouikaEidiMenu.addOptions(options)
     MouikaEidiMenu.open()
 

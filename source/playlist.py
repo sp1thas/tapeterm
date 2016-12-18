@@ -11,8 +11,8 @@ __email__ = "sp1thas@autistici.org"
 
 from termcolor import colored
 from subprocess import call
-import AllPlaylists, menu, home,exit, time, ksena, categories, lovers, mood, twentyfour, greek
-
+import AllPlaylists, menu, home,exit, time, ksena, categories, lovers, mood, twentyfour, greek, lang
+from lang import curr_lang
 '''
     FullList returns a dict.
     Dictionary structure:
@@ -20,7 +20,10 @@ import AllPlaylists, menu, home,exit, time, ksena, categories, lovers, mood, twe
 '''
 
 def FullList(category, *ParentMenuFunc):
-    print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
+    if not curr_lang():
+        print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
+    elif curr_lang():
+        print 'Currenty playlists'
     counter = 0
     FinalPlaylist = AllPlaylists.GetThem(category)
 
@@ -35,9 +38,17 @@ def FullList(category, *ParentMenuFunc):
     for i in FinalPlaylist:
         counter += 1
         if len(str(counter))==1:
-            OutputStr = " "+str(counter)+". "+FinalPlaylist[i][0]
+            if len(FinalPlaylist[i][0])>1 and curr_lang():
+                OutputStr = " "+str(counter)+". "+FinalPlaylist[i][0][1]
+            else:
+                OutputStr = " "+str(counter)+". "+FinalPlaylist[i][0][0]
+
         else:
-            OutputStr = str(counter)+". "+FinalPlaylist[i][0]
+            if len(FinalPlaylist[i][0])>1 and curr_lang():
+                OutputStr = str(counter)+". "+FinalPlaylist[i][0][1]
+            else:
+                OutputStr = str(counter)+". "+FinalPlaylist[i][0][0]
+
         print OutputStr
         time.sleep(0.1)
     if ParentMenuFunc:
@@ -52,8 +63,10 @@ def FullList(category, *ParentMenuFunc):
         div = len(OutputStr1) + 2
         print colored(OutputStr1,"yellow")
     select = -1
-
-    select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
+    if not curr_lang():
+        select = input("Επιλέξτε λίστα (για έξοδο δώστε 0)\n>>> ")
+    elif curr_lang():
+        select = input("Select playlist (for exit give 0)\n>>> ")
     if select == len(FinalPlaylist)+1:
         eval(*ParentMenuFunc)
     elif select == len(FinalPlaylist)+2:
