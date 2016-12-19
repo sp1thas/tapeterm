@@ -10,7 +10,7 @@ Available languages: English, Greek.
 
 ### Auto Installation - Build and Run
 
-`git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_in_Terminal`
+`git clone http://github.com/sp1thas/kasetophono_in_Terminal.git & cd kasetophono_in_Terminal`
 
 `chmod -X build.sh`
 
