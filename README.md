@@ -113,7 +113,7 @@ just run kasetophono.py
 
 ## Start Page
 
-![](/assets/python-start.png)
+![](/assets/1.png)
 
 ## Main menu
 
