@@ -10,52 +10,55 @@ Available languages: English, Greek.
 
 ### Auto Installation - Build and Run
 
-`git clone http://github.com/sp1thas/kasetophono_in_Terminal.git && cd kasetophono_in_Terminal`
+```bash
+$ git clone http://github.com/sp1thas/kasetophono_in_Terminal.git && cd kasetophono_in_Terminal
+$ chmod -X build.sh```
 
-`chmod -X build.sh`
+
 
 then run as root:
 
-`sh build.sh`
-
+```bash
+$ build.sh```
 ### Manual Installation
 
 run as root:
 
-* **Debian\/Ubuntu** based:
+* **Debian/Ubuntu** based:
 
-`apt-get install mpv python2 python2-pip python3-pip`
-
-`pip3 install mps-youtube`
-
-`pip2 install termcolor menu`
+```bash
+$ apt-get install mpv python2 python2-pip python3-pip
+$ pip3 install mps-youtube
+$ pip2 install termcolor menu```
 
 * **Fedora** based:
 
-`yum install mpv python2 python2-pip python3-pip`
-
-`pip3 install mps-youtube`
-
-`pip2 install termcolor menu`
+```bash
+$ yum install mpv python2 python2-pip python3-pip
+$ pip3 install mps-youtube
+$ pip2 install termcolor menu```
 
 * **Arch** based
 
-`pacman -S install mpv python2 python2-pip python3-pip`
-
-`pip3 install mps-youtube`
-
-`pip2 install termcolor menu`
+```bash
+$ pacman -S install mpv python2 python2-pip python3-pip
+$ pip3 install mps-youtube
+$ pip2 install termcolor menu```
 
 ### [MPV](https://mpv.io/)
 
 * Installation:
   run as root:
   * **Debian\/Ubuntu** based:
-    `apt-get install mpv`
+
+    ```bash
+    $ apt-get install mpv```
   * **Fedora** based:
-    `yum install mpv`
+    ```bash
+    $ yum install mpv```
   * **Arch** based:
-    `pacman -S mpv`
+    ```bash
+    $ pacman -S mpv```
 
 
 ### Python
@@ -63,24 +66,29 @@ run as root:
 * Installation:
 
   run as root
-  * **Debian\/Ubuntu** based:
-    `apt-get install python2`
+  * **Debian/Ubuntu** based:
+    ```bash
+    $ apt-get install python2```
   * **Fedora** based:
-    `yum install python2`
+    ```bash
+    $ yum install python2```
   * Arch based:
-    `pacman -S python2`
+    ```bash
+    $ pacman -S python2```
 
 
 ### PIP \(Python Package Management\)
 
 * Installation
 
-  * **Debian\/Ubuntu** based:
-    `apt-get install python2-pip python3-pip`
+  * **Debian/Ubuntu** based:
+    ```bash
+    $ apt-get install python2-pip python3-pip```
   * **Fedora** based:
     `yum install python2-pip python3-pip`
   * **Arch** based:
-    `pacman -S python2-pip python3-pip`
+    ```bash
+    $ pacman -S python2-pip python3-pip```
 
 
 ### Python Modules
@@ -88,28 +96,33 @@ run as root:
 * [termcolor](https://pypi.python.org/pypi/termcolor)
 
   * Installation
-    `sudo pip2 install termcolor`
+    ```bash
+    $ sudo pip2 install termcolor```
 
 
 * [menus](https://pypi.python.org/pypi/Menus)
 
   * Installation:
-    `sudo pip2 install menu`
+    ```bash
+    $ sudo pip2 install menu```
 
 
 * [mps-youtube](https://github.com/mps-youtube/)
 
   * Installation:
-    `sudo pip3 install mps-youtube`
+    ```bash
+    $ sudo pip3 install mps-youtube```
 
 
-`git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko`
+```bash
+$ git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko```
 
 ## Usage
 
 just run kasetophono.py
 
-`python2 kasetophono.py`
+```bash
+$ python2 kasetophono.py```
 
 ## Start Page
 
@@ -117,12 +130,15 @@ just run kasetophono.py
 
 ## Main menu
 
-![](/assets/python-main.png)
+![](/assets/2.png)
 
 ## Sub menu
 
-![](/assets/python-submenu.png)
+![](/assets/3.png)
 
 ## Playlists
 
-![](/assets/python-playlist.png)
+![](/assets/4.png)
+
+## Playing..
+![](/assets/5.png)
