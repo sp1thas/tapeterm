@@ -11,9 +11,9 @@ __email__ = "sp1thas@autistici.org"
 
 import menu, exit, playlist, home, lang
 from termcolor import colored
-
+from head import head
 def ListMenu():
-    title = 'Lovers'
+    title = head() + '''Lovers'''
     LoversMenu = menu.Menu(title)
     options =   [
 

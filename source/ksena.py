@@ -13,10 +13,10 @@ from termcolor import colored
 import menu, lang
 import playlist, home, exit, categories
 from lang import curr_lang
-
+from head import head
 def ListMenu():
     if not curr_lang():
-        title = 'Ξένα'
+        title = head() + '''Ξένα'''
         options =   [
         {"name":"Δημοφιλείς","function":popular}, {"name":"Ροκ","function":rock},
         {"name":"Τζαζ","function":jazz}, {"name":"Ηλεκτρονικές","function":electro},
@@ -28,7 +28,7 @@ def ListMenu():
         {"name":colored("Έξοδος", "red"),"function":exit.exit}
         ]
     elif curr_lang():
-        title = 'International'
+        title = head() + '''International'''
         options =   [
         {"name":"Popular","function":popular}, {"name":"Ροκ","function":rock},
         {"name":"Jazz","function":jazz}, {"name":"Electro","function":electro},

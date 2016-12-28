@@ -13,6 +13,7 @@ from termcolor import colored
 from subprocess import call
 import AllPlaylists, menu, home,exit, time, ksena, categories, lovers, mood, twentyfour, greek, lang
 from lang import curr_lang
+from head import head
 '''
     FullList returns a dict.
     Dictionary structure:
@@ -20,10 +21,11 @@ from lang import curr_lang
 '''
 
 def FullList(category, *ParentMenuFunc):
+    call('clear')
     if not curr_lang():
-        print 'Οι playlist που υπάρχουν προς το παρόν ;\n'
+        print head() + '''Οι playlist που υπάρχουν προς το παρόν ;\n'''
     elif curr_lang():
-        print 'Currenty playlists'
+        print head() + '''Currenty playlists\n'''
     counter = 0
     FinalPlaylist = AllPlaylists.GetThem(category)
 
@@ -50,7 +52,7 @@ def FullList(category, *ParentMenuFunc):
                 OutputStr = str(counter)+". "+FinalPlaylist[i][0][0]
 
         print OutputStr
-        time.sleep(0.1)
+        time.sleep(0.03)
     if ParentMenuFunc:
         OutputStr = str(len(FinalPlaylist)+1)+". "+"Previous Menu"
         div = len(OutputStr) + 2

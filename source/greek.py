@@ -12,9 +12,10 @@ __email__ = "sp1thas@autistici.org"
 import menu, playlist, home, exit, lang
 from termcolor import colored
 from lang import curr_lang
+from head import head
 def ListMenu():
     if not curr_lang():
-        title = 'Ελληνικά'
+        title = head() + '''Ελληνικά'''
 
         options =   [
                     {"name":"Έντεχνες","function":Entexnes},
@@ -30,7 +31,7 @@ def ListMenu():
                     {"name":colored("Έξοδος", "red"),"function":exit.exit}
                     ]
     elif curr_lang():
-        title = 'Greek'
+        title = head() + '''Greek'''
 
         options =   [
                     {"name":"Entexno","function":Entexnes},

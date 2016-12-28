@@ -13,9 +13,10 @@ import menu, sys, exit
 import ksena, greek, categories, mood, alternative_indie, lovers, roulette, dj, twentyfour, playlist
 from termcolor import colored
 from lang import curr_lang
+from head import head
 def ListMenu():
 	if not curr_lang():
-		title = 'Κεντρικό Μενού'
+		title = head() + '''Κεντρικό Μενού'''
 		MainMenu = menu.Menu(title)
 		options =   [
 						{"name":"Ξένα","function":ksena.ListMenu},
@@ -33,7 +34,7 @@ def ListMenu():
 		MainMenu.addOptions(options)
 		MainMenu.open()
 	elif curr_lang():
-		title = 'Κεντρικό Μενού'
+		title = head() + '''Main menu'''
 		MainMenu = menu.Menu(title)
 		options =   [
 						{"name":"International","function":ksena.ListMenu},

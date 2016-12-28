@@ -10,8 +10,8 @@ __email__ = "sp1thas@autistici.org"
 #   ===================================
 from subprocess import call
 import sys, lang
-
+from head import head
 def exit():
     call(["clear"])
-    print "See Ya!"
+    print head() + '''See Ya!'''
     sys.exit()
