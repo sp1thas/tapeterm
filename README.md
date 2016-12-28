@@ -12,14 +12,16 @@ Available languages: English, Greek.
 
 ```bash
 $ git clone http://github.com/sp1thas/kasetophono_in_Terminal.git && cd kasetophono_in_Terminal
-$ chmod -X build.sh```
+$ chmod -X build.sh
+```
 
 
 
 then run as root:
 
 ```bash
-$ build.sh```
+$ build.sh
+```
 ### Manual Installation
 
 run as root:
@@ -29,21 +31,24 @@ run as root:
 ```bash
 $ apt-get install mpv python2 python2-pip python3-pip
 $ pip3 install mps-youtube
-$ pip2 install termcolor menu```
+$ pip2 install termcolor menu
+```
 
 * **Fedora** based:
 
 ```bash
 $ yum install mpv python2 python2-pip python3-pip
 $ pip3 install mps-youtube
-$ pip2 install termcolor menu```
+$ pip2 install termcolor menu
+```
 
 * **Arch** based
 
 ```bash
 $ pacman -S install mpv python2 python2-pip python3-pip
 $ pip3 install mps-youtube
-$ pip2 install termcolor menu```
+$ pip2 install termcolor menu
+```
 
 ### [MPV](https://mpv.io/)
 
@@ -52,13 +57,16 @@ $ pip2 install termcolor menu```
   * **Debian\/Ubuntu** based:
 
     ```bash
-    $ apt-get install mpv```
+    $ apt-get install mpv
+    ```
   * **Fedora** based:
     ```bash
-    $ yum install mpv```
+    $ yum install mpv
+    ```
   * **Arch** based:
     ```bash
-    $ pacman -S mpv```
+    $ pacman -S mpv
+    ```
 
 
 ### Python
@@ -68,13 +76,16 @@ $ pip2 install termcolor menu```
   run as root
   * **Debian/Ubuntu** based:
     ```bash
-    $ apt-get install python2```
+    $ apt-get install python2
+    ```
   * **Fedora** based:
     ```bash
-    $ yum install python2```
+    $ yum install python2
+    ```
   * Arch based:
     ```bash
-    $ pacman -S python2```
+    $ pacman -S python2
+    ```
 
 
 ### PIP \(Python Package Management\)
@@ -83,12 +94,16 @@ $ pip2 install termcolor menu```
 
   * **Debian/Ubuntu** based:
     ```bash
-    $ apt-get install python2-pip python3-pip```
+    $ apt-get install python2-pip python3-pip
+    ```
   * **Fedora** based:
-    `yum install python2-pip python3-pip`
+    ```bash
+    $ yum install python2-pip python3-pip
+    ```
   * **Arch** based:
     ```bash
-    $ pacman -S python2-pip python3-pip```
+    $ pacman -S python2-pip python3-pip
+    ```
 
 
 ### Python Modules
@@ -97,32 +112,37 @@ $ pip2 install termcolor menu```
 
   * Installation
     ```bash
-    $ sudo pip2 install termcolor```
+    $ sudo pip2 install termcolor
+    ```
 
 
 * [menus](https://pypi.python.org/pypi/Menus)
 
   * Installation:
     ```bash
-    $ sudo pip2 install menu```
+    $ sudo pip2 install menu
+    ```
 
 
 * [mps-youtube](https://github.com/mps-youtube/)
 
   * Installation:
     ```bash
-    $ sudo pip3 install mps-youtube```
+    $ sudo pip3 install mps-youtube
+    ```
 
 
 ```bash
-$ git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko```
+$ git clone https://github.com/sp1thas/kasetophono_sto_termatiko.git & cd kasetophono_sto_termatiko
+```
 
 ## Usage
 
 just run kasetophono.py
 
 ```bash
-$ python2 kasetophono.py```
+$ python2 kasetophono.py
+```
 
 ## Start Page
 
