@@ -1,7 +1,7 @@
-# Kasetophono in Terminal || [Κασετόφωνο](http://www.kasetophono.com) στο Τερματικό
+# [Kasetophono](http://www.kasetophono.com) in Terminal
 
-python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
----
+This is a python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
+
 Play kasetophono's playlists directly from your terminal
 Available languages: English, Greek.
 ---
@@ -146,19 +146,19 @@ $ python2 kasetophono.py
 
 ## Start Page
 
-![](/assets/1.png)
+![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/1.png)
 
 ## Main menu
 
-![](/assets/2.png)
+![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/2.png)
 
 ## Sub menu
 
-![](/assets/3.png)
+![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/3.png)
 
 ## Playlists
 
-![](/assets/4.png)
+![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/4.png)
 
 ## Playing..
-![](/assets/5.png)
+![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/5.png)
