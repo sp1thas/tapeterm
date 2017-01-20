@@ -1,4 +1,4 @@
-# [Kasetophono](http://www.kasetophono.com) in Terminal
+# TapeTerm - Kasetophono in Terminal
 
 This is a python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
 
@@ -162,3 +162,9 @@ $ python2 kasetophono.py
 
 ## Playing..
 ![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/5.png)
+
+## Author
+Simakis Panagiotis [sp1thas@autistici.org](mailto://sp1thas@autistici.org) (Initial work )
+
+## Licence
+This project is licensed under the GNU General Public License version 3 - see the [LICENSE.md](LICENSE.md) file for details
