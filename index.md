@@ -1,4 +1,3 @@
-<title>Panagiotis Simakis ➔ TapeTerm</title>
 # Kasetophono in Terminal
 ![logo](assets/logo.png)
 
@@ -131,7 +130,7 @@ This project is licensed under the GNU General Public License version 3 - see th
   border: 1px solid #e5e5e5;
 }
 .powered{
-  display:none;
+  display:none !important;
 }
 .asciinema-player{
   border-radius: 5px;
