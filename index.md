@@ -61,11 +61,14 @@ run as root:
 
 * Installation:
 
-  run as root
+  run as root:
+
   * **Debian/Ubuntu** based:
   `➔ apt-get install python2`
+
   * **Fedora** based:
   `➔ yum install python2`
+
   * **Arch** based:
   `➔ pacman -S python2`
 
