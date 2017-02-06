@@ -147,6 +147,9 @@ just run kasetophono.py
 $ python2 kasetophono.py
 ```
 
+## Demo
+<html><script type="text/javascript" src="https://asciinema.org/a/102102.js" id="asciicast-102102" async></script></html>
+
 ## Start Page
 
 ![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/1.png)
