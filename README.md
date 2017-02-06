@@ -112,6 +112,7 @@ $ python2 kasetophono.py
 ```
 
 ## Demo
+<script type="text/javascript" src="https://asciinema.org/a/102102.js" id="asciicast-102102" async></script>
 [![asciicast](https://asciinema.org/a/102102.png)](https://asciinema.org/a/102102)
 
 ## Author
