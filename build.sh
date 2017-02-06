@@ -1,8 +1,10 @@
 #!/bin/bash
 
+git clone https://github.com/sp1thas/TapeTerm.git
+
 OS=$(lsb_release -si)
 
-                    #capture the user distro
+#capture the user distro
 
 if [  $OS = "Fedora" ]; then
   sudo yum -y install python-pip python3-pip mpv
@@ -28,7 +30,8 @@ read Choise
 
 if [ $Choise = "Y" ] || [ $Choise="y" ]; then
   clear
-  python kasetophono.py
+  cd TapeTerm
+  python2 kasetophono.py
 else
   exit
 fi
