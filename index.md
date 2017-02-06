@@ -1,3 +1,4 @@
+<title>Panagiotis Simakis ➔ TapeTerm</title>
 # Kasetophono in Terminal
 ![logo](assets/logo.png)
 
@@ -123,3 +124,10 @@ Simakis Panagiotis [sp1thas@autistici.org](mailto://sp1thas@autistici.org) (Init
 ## Licence
 This project is licensed under the GNU General Public License version 3 - see the [LICENSE.md](LICENSE.md) file for details
 <style>
+.asciicast{
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+</style>
