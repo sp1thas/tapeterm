@@ -96,14 +96,19 @@ $ pip2 install termcolor menu
 * Installation
 
   * **Debian/Ubuntu** based:
+
     ```bash
     $ apt-get install python2-pip python3-pip
     ```
+
   * **Fedora** based:
+
     ```bash
     $ yum install python2-pip python3-pip
     ```
+
   * **Arch** based:
+
     ```bash
     $ pacman -S python2-pip python3-pip
     ```
@@ -114,6 +119,7 @@ $ pip2 install termcolor menu
 * [termcolor](https://pypi.python.org/pypi/termcolor)
 
   * Installation
+
     ```bash
     $ sudo pip2 install termcolor
     ```
@@ -122,6 +128,7 @@ $ pip2 install termcolor menu
 * [menus](https://pypi.python.org/pypi/Menus)
 
   * Installation:
+
     ```bash
     $ sudo pip2 install menu
     ```
@@ -130,6 +137,7 @@ $ pip2 install termcolor menu
 * [mps-youtube](https://github.com/mps-youtube/)
 
   * Installation:
+
     ```bash
     $ sudo pip3 install mps-youtube
     ```
@@ -146,9 +154,6 @@ just run kasetophono.py
 ```bash
 $ python2 kasetophono.py
 ```
-
-## Demo
-<html><script type="text/javascript" src="https://asciinema.org/a/102102.js" id="asciicast-102102" async></script></html>
 
 ## Start Page
 
