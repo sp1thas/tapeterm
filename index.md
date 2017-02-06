@@ -130,4 +130,13 @@ This project is licensed under the GNU General Public License version 3 - see th
   border-radius: 5px;
   border: 1px solid #e5e5e5;
 }
+.powered{
+  display:none;
+}
+.asciinema-player{
+  border-radius: 5px;
+}
+.iframe{
+  padding: 5px;
+}
 </style>
