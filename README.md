@@ -111,24 +111,8 @@ just run kasetophono.py
 $ python2 kasetophono.py
 ```
 
-## Start Page
-
-![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/1.png)
-
-## Main menu
-
-![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/2.png)
-
-## Sub menu
-
-![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/3.png)
-
-## Playlists
-
-![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/4.png)
-
-## Playing..
-![](https://raw.githubusercontent.com/sp1thas/TapeTerm/master/assets/5.png)
+## Demo
+[![asciicast](https://asciinema.org/a/102102.png)](https://asciinema.org/a/102102)
 
 ## Author
 Simakis Panagiotis [sp1thas@autistici.org](mailto://sp1thas@autistici.org) (Initial work )
