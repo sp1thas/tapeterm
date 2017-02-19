@@ -57,7 +57,7 @@ run as root:
     `➔ pacman -S mpv`
 
 
-### Python
+### Python 2.7.13
 
 * Installation:
 
