@@ -1,3 +1,4 @@
+#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 #   ===================================
 #        Kasetophono sto termatiko
@@ -7,7 +8,10 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 from subprocess import call
-from source import start, home,lang
+from source import *
+from source import start
+from source import lang
+from source import home
 
 language_input = start.logo()
 

@@ -10,7 +10,13 @@ __email__ = "sp1thas@autistici.org"
 #   ===================================
 from subprocess import call
 from termcolor import cprint
-import lang
+try:
+    import lang
+except ImportError:
+    pass
+
+
+
 from head import head
 
 def SetMPV():
