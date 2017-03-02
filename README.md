@@ -13,6 +13,8 @@ Available languages: English, Greek.
 
 ### Auto Installation - Build and Run
 
+**for linux distros only**
+
 ```bash
 wget https://raw.githubusercontent.com/sp1thas/TapeTerm/master/build.sh; sh build.sh
 ```
