@@ -52,7 +52,7 @@ class TapeLib():
 
     def write_json(self, data={}):
         assert len(data)>0
-        with open(filepath, 'w') as f:
+        with open(JSON, 'w') as f:
             json.dump(data, f)
 
     def read_json(self):
@@ -99,7 +99,6 @@ class TapeLib():
             for sub, subsub in tqdm(struct_url.items()):
                 for name, url in subsub.items():
 
-                    print name, url
                     all_urls[cat][sub] = {}
                     self.dr.get(url)
 
@@ -109,9 +108,24 @@ class TapeLib():
                     while(next):
                         try:
                             next[0].click()
-                            time.sleep(1)
+                            time.sleep(1.5)
                         except:
                             break
                     for _ in self.dr.find_elements_by_xpath('//*/h2[@class="related-posts-title"]/a'):
-                        all_urls[cat][sub][_.get_attribute('text')] = _.get_attribute('href')
+                        all_urls[cat][sub][_.get_attribute('text').strip()] = _.get_attribute('href')
+
+
+        print('lets got get playlist urls')
+
+        for cat, subs in tqdm(all_urls.items()):
+            for sub, subsub in tqdm(subs.items()):
+                for name, url in tqdm(subsub.items()):
+
+                    if url:
+                        self.dr.get(url)
+                        pl_el = self.dr.find_element_by_xpath('//*/div[@class="post-body entry-content"]/div/div[2]/iframe')
+
+                        all_urls[cat][sub][name] = pl_el.get_attribute('src')
+                        self.write_json(all_urls)
+                        return
         pprint(all_urls)
