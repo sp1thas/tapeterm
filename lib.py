@@ -14,6 +14,8 @@ CHROMEDRIVER = os.path.join(CONFIG_FOLDER, 'chromedriver')
 
 
 class TapeLib():
+    from lxml import html
+    import requests
 
     def __init__(self):
         self.dr = None
@@ -50,10 +52,14 @@ class TapeLib():
         assert os.path.exists(CHROMEDRIVER)
         self.dr = webdriver.Chrome(CHROMEDRIVER)
 
-    def write_json(self, data={}):
+    def write_json(self, data={}, filename=None):
+        if filename is None:
+            filename = JSON[:]
+        else:
+            pass
         assert len(data)>0
-        with open(JSON, 'w') as f:
-            json.dump(data, f)
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=2)
 
     def read_json(self):
         """
@@ -115,8 +121,6 @@ class TapeLib():
                         all_urls[cat][sub][_.get_attribute('text').strip()] = _.get_attribute('href')
 
 
-        print('lets got get playlist urls')
-
         for cat, subs in tqdm(all_urls.items()):
             for sub, subsub in tqdm(subs.items()):
                 for name, url in tqdm(subsub.items()):
@@ -125,7 +129,18 @@ class TapeLib():
                         self.dr.get(url)
                         pl_el = self.dr.find_element_by_xpath('//*/div[@class="post-body entry-content"]/div/div[2]/iframe')
 
-                        all_urls[cat][sub][name] = pl_el.get_attribute('src')
+                        all_urls[cat][sub][name] = self.get_plid_from_url(pl_el.get_attribute('src'))
                         self.write_json(all_urls)
                         return
-        pprint(all_urls)
+
+    def get_plid_from_url(self, url):
+        """
+        Get youtube playlist id from url
+        :param url: kasetophono url
+        :return: youtube playlist url
+        """
+        req = requests.get(url)
+        tree = html.fromstring(req.text)
+        for _ in tree.xpath('/html/body/div[1]/div[2]/div/div/div[1]/div[3]/div/div[1]/div/div/div/div[1]/div[3]/div[1]/div[2]/iframe/@src'):
+            data[main][cat][title] = _
+        self.write_json(filename='config2.json', data=data)
