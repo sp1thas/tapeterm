@@ -7,14 +7,46 @@ __author__ = "Simakis Panagiotis"
 __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
-from subprocess import call
-from source import *
-from source import start
-from source import lang
-from source import home
+import os, json
+HOME = os.environ['HOME']
+CONFIG_FOLDER = os.path.join(HOME, '.tapeterm')
+JSON = os.path.join(CONFIG_FOLDER, 'config.json')
 
-language_input = start.logo()
+from lib import TapeLib
+from pyclimenu import Menu
 
-lang.set_lang(language_input)
+class TapeTerm(object):
+    def __init__(self):
+        self.tl = TapeLib()
+        self.data = self.read_json()
+        self.mn = Menu()
+        self.main()
 
-home.ListMenu()
+    def main(self):
+        items = ()
+        for k in self.data.keys():
+            items += (
+                {
+                    'label': k,
+                    'callback': self.sub_menu,
+                    'params': {'menu': k}
+                }
+            ,)
+        print items
+        # self.mn.display(header='TapeTerm')
+
+    def sub_menu(self, menu=None):
+        assert isinstance(menu, basestring), 'menu must be string'
+        print 'sdsd'
+
+
+    def read_json(self):
+        """
+        Read Config JSON FILE
+        :param filepath:
+        :return:
+        """
+        assert os.path.exists(JSON)
+        with open(JSON, 'r') as f:
+            return json.load(f)
+
