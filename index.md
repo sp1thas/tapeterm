@@ -1,7 +1,5 @@
-# Kasetophono in Terminal
-![logo](assets/logo.png)
-
-**TapeTerm**
+# tapeterm
+Kasetophono made for terminals
 
 This is a python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
 
