@@ -10,23 +10,24 @@ __email__ = "sp1thas@autistici.org"
 #   ===================================
 
 import json, os, sys
-from config import *
-from lib import TapeLib
+from .config import *
+from .lib import TapeLib
 from pyclimenu.menu import Menu
 import dpath
 import subprocess
 import traceback
-from misc import header
+from .misc import header
 
 class TapeTerm(object):
     """
     Tapeterm main class
     """
-    def __init__(self):
+    def __init__(self, JSON=None):
         """
         Tape term constructor
         """
         self.tl = TapeLib()
+        self.JSON = JSON
         self.data = self.read_json()
         pr = subprocess.Popen(
             ['which', 'mpsyt'],
@@ -98,8 +99,8 @@ class TapeTerm(object):
         Read Config JSON FILE
         :return:
         """
-        assert os.path.exists(JSON)
-        with open(JSON, 'r') as f:
+        assert os.path.exists(self.JSON)
+        with open(self.JSON, 'r') as f:
             return json.load(f)
 
 def check_config_files():
@@ -123,17 +124,20 @@ def arg_parsing():
     parser.add_argument("--el", help="Greek version", action="store_true")
     return parser.parse_args()
 
-if __name__ == '__main__':
+
+def main():
     args = arg_parsing()
     if args.upd:
-        import lib
-        a = lib.TapeLib(lang='el' if args.el else 'en')
+        from .lib import TapeLib
+        'Will update: EN: {} EL: {}'.format(int(args.en), int(args.el))
+        a = TapeLib(lang='el' if args.el else 'en')
         a.set_up()
         a.get_home()
     check_config_files()
+    print(args)
     if args.en:
         JSON = JSON_EN[:]
     else:
         JSON = JSON_EL[:]
 
-    TapeTerm()
+    TapeTerm(JSON=JSON)

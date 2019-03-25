@@ -33,7 +33,7 @@ class TapeLib(object):
                 'OK' if os.path.exists(CHROMEDRIVER) else 'MISSING',
                 'OK' if os.path.exists(self.JSON) else 'MISSING',
             ))
-        if self.lang == 'EL':
+        if self.lang == 'el':
             self.BASE_URL = BASE_URL_EL[:]
         else:
             self.BASE_URL = BASE_URL_EN[:]
@@ -128,7 +128,7 @@ class TapeLib(object):
         assert isinstance(self.dr, selenium.webdriver.chrome.webdriver.WebDriver)
 
         self.dr.get(self.BASE_URL)
-
+        print('BASE URL: {}'.format(self.BASE_URL))
         cat_x = '//*[@id="nav2"]/li'
         cat_elems = self.dr.find_elements_by_xpath(cat_x)
 
