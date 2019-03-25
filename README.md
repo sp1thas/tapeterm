@@ -11,17 +11,17 @@ This is a python project for listening [Kasetophono](http://www.kasetophono.com)
 
 ## Installation
 ```bash
-pip install git+https://github.com/sp1thas/tapeterm
+pip install tapeterm
 ```
 
 ## Usage
 Liste some music
 ```bash
-python kasetophono.py --en # for english version else --el for the greek one
+tapeterm --en # for english version else --el for the greek one
 ```
 or update the list of playlists by adding the most recent playlists:
 ```bash
-python kasetophono.py --upd --en # for english version else --el for the greek one
+tapeterm --upd --en # for english version else --el for the greek one
 ```
 
 ## Author
