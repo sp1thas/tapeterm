@@ -1,17 +1,15 @@
-# Kasetophono in Terminal
+# tapeterm
 
-This is a python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
+A python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
 
 ## Features:
 1. Scraps both greek and english version of kasetophono
 2. Easy-to-use terminal menu
 3. Get latests playlist on your own by adding a single argument
 
-## 
-
 ## Installation
 ```bash
-pip install tapeterm
+pip install git+https://github.com/sp1thas/tapeterm.git
 ```
 
 ## Usage
