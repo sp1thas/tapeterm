@@ -1,11 +1,10 @@
 # Kasetophono in Terminal
 
-This is a python project for listening [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal
+Listen [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal. This project is based on [mps-youtube](https://github.com/mps-youtube/mps-youtube) and [pyclimenu](https://github.com/sp1thas/pyclimenu) 
 
 ## Features:
-1. Scraps both greek and english version of kasetophono
+1. Support both english and greek version of kasetophono
 2. Easy-to-use terminal menu
-3. Get latests playlist on your own by adding a single argument
 
 ## 
 
@@ -15,13 +14,8 @@ pip install tapeterm
 ```
 
 ## Usage
-Liste some music
 ```bash
-tapeterm --en # for english version else --el for the greek one
-```
-or update the list of playlists by adding the most recent playlists:
-```bash
-tapeterm --upd --en # for english version else --el for the greek one
+tapeterm --en # for english version else --el
 ```
 
 ## Author

@@ -9,9 +9,8 @@ __license__ = "GPL"
 __email__ = "sp1thas@autistici.org"
 #   ===================================
 
-import json, os, sys
+import json, sys
 from .config import *
-from .lib import TapeLib
 from pyclimenu.menu import Menu
 import dpath
 import subprocess
@@ -26,7 +25,7 @@ class TapeTerm(object):
         """
         Tape term constructor
         """
-        self.tl = TapeLib()
+        # self.tl = TapeLib()
         self.JSON = JSON
         self.data = self.read_json()
         pr = subprocess.Popen(
@@ -105,21 +104,22 @@ class TapeTerm(object):
 
 def check_config_files():
     import shutil
+    print(os.listdir())
     if not os.path.exists(JSON_EN):
         shutil.copy(
-            os.path.join('../', os.path.basename(JSON_EN)),
+            os.path.join('./', os.path.basename(JSON_EN)),
             os.path.join(CONFIG_FOLDER, os.path.basename(JSON_EN))
         )
     if not os.path.exists(JSON_EL):
         shutil.copy(
-            os.path.join('../', os.path.basename(JSON_EL)),
+            os.path.join('.', os.path.basename(JSON_EL)),
             os.path.join(CONFIG_FOLDER, os.path.basename(JSON_EL))
         )
 
 def arg_parsing():
     import argparse
     parser = argparse.ArgumentParser(description='tapeterm: listen your favorite playlist from your terminal')
-    parser.add_argument("--upd", help="Update the list of playlists", action="store_true")
+    # parser.add_argument("--upd", help="Update the list of playlists", action="store_true")
     parser.add_argument("--en", help="English version", action="store_true")
     parser.add_argument("--el", help="Greek version", action="store_true")
     return parser.parse_args()
@@ -127,14 +127,12 @@ def arg_parsing():
 
 def main():
     args = arg_parsing()
-    if args.upd:
-        from .lib import TapeLib
-        'Will update: EN: {} EL: {}'.format(int(args.en), int(args.el))
-        a = TapeLib(lang='el' if args.el else 'en')
-        a.set_up()
-        a.get_home()
-    check_config_files()
-    print(args)
+    # if args.upd:
+    #     from .crawler import TapeLib
+    #     'Will update: EN: {} EL: {}'.format(int(args.en), int(args.el))
+    #     a = TapeLib(lang='el' if args.el else 'en')
+    #     a.set_up()
+    #     a.get_home()
     if args.en:
         JSON = JSON_EN[:]
     else:

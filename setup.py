@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import os
-from setuptools import setup, find_packages
+from setuptools import setup
+from tapeterm.config import check_config_files
 
 readme_file = open('README.md', 'r')
 long_description = readme_file.read()
@@ -24,3 +24,5 @@ setup(
     install_requires=install_requires,
     packages=['tapeterm'],
 )
+
+check_config_files()

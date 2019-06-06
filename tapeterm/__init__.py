@@ -1,0 +1,1 @@
+from tapeterm.config import *
