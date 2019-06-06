@@ -30,7 +30,6 @@ class TapeTerm(object):
         )
         self.mpsyt_bin = pr.communicate()[0].strip()
         assert self.mpsyt_bin, 'mpsyt binary not found'
-        self.main()
 
     def disp_menu(self, label=''):
         """
