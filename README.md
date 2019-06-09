@@ -1,4 +1,5 @@
 # tapeterm
+![build-shield](https://travis-ci.org/sp1thas/tapeterm.svg?branch=master)
 ### Kasetophono in Terminal
 Listen [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal. This project is based on [mps-youtube](https://github.com/mps-youtube/mps-youtube) and [pyclimenu](https://github.com/sp1thas/pyclimenu) 
 
