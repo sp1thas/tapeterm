@@ -1,6 +1,6 @@
 import unittest
-import json
 from tapeterm.tapeterm import *
+
 
 class TestTapeTerm(unittest.TestCase):
 
