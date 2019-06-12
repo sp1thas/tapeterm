@@ -1,5 +1,5 @@
 # tapeterm
-![build-shield](https://travis-ci.org/sp1thas/tapeterm.svg?branch=master)
+![build-shield](https://travis-ci.org/sp1thas/tapeterm.svg?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0b8605b136ea4c1fa9ec33e0af2ae15c)](https://www.codacy.com/app/sp1thas/TapeTerm?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sp1thas/tapeterm&amp;utm_campaign=Badge_Grade)
 ### Kasetophono in Terminal
 Listen [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your terminal. This project is based on [mps-youtube](https://github.com/mps-youtube/mps-youtube) and [pyclimenu](https://github.com/sp1thas/pyclimenu) 
 
