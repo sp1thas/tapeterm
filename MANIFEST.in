@@ -1,1 +1,2 @@
-include tapeterm/config_*.json
+include tapeterm/config_en.json
+include tapeterm/config_el.json
