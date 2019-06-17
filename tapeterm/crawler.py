@@ -19,7 +19,8 @@ class TapeLib(object):
         Constructo
         :param lang: language version
         """
-        assert lang in ('en', 'el'), 'Given language is not supported'
+        if lang not in ('en', 'el'):
+            raise ValueError('Given language is not supported')
         self.lang = lang
         self.JSON = os.path.join(CONFIG_FOLDER, 'config_{}.json'.format(lang))
         self.dr = None
@@ -85,15 +86,17 @@ class TapeLib(object):
         Set up headless brwoser
         :return: nada
         """
-        assert self.dr is None
-        assert os.path.exists(CHROMEDRIVER)
+        if self.dr is not None:
+            raise ValueError('self.dr is not None')
+        if not os.path.exists(CHROMEDRIVER):
+            raise ValueError('chromedriver file does not exist')
         self.opts = webdriver.ChromeOptions()
         self.opts.add_argument('--headless')
         prefs = {"profile.managed_default_content_settings.images": 2}
         self.opts.add_experimental_option("prefs", prefs)
         self.dr = webdriver.Chrome(CHROMEDRIVER, chrome_options=self.opts)
 
-    def write_json(self, data={}, filename=None):
+    def write_json(self, data=None, filename=None):
         """
         Write json file in the config directory
         :param data: json data
@@ -104,16 +107,17 @@ class TapeLib(object):
             filename = self.JSON[:]
         else:
             pass
-        assert len(data)>0
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=2)
+        if data:
+            with open(filename, 'w') as f:
+                json.dump(data, f, indent=2)
 
     def read_json(self):
         """
         Read Config JSON FILE
         :return: nada
         """
-        assert os.path.exists(self.JSON)
+        if not os.path.exists(self.JSON):
+            raise ValueError('JSON file does not exist')
         with open(self.JSON, 'r') as f:
             self.data = json.load(f)
 
@@ -125,7 +129,8 @@ class TapeLib(object):
     def get_home(self):
         if not isinstance(self.dr, selenium.webdriver.chrome.webdriver.WebDriver):
             self.set_driver()
-        assert isinstance(self.dr, selenium.webdriver.chrome.webdriver.WebDriver)
+        if not isinstance(self.dr, selenium.webdriver.chrome.webdriver.WebDriver):
+            raise RuntimeError('drive is not initialized')
 
         self.dr.get(self.BASE_URL)
         print('BASE URL: {}'.format(self.BASE_URL))
@@ -158,12 +163,12 @@ class TapeLib(object):
 
                     self.dr.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                     time.sleep(1)
-                    next = self.dr.find_elements_by_xpath('//*/div[@class="morepost bounce"]/a')
-                    while next:
+                    next_p = self.dr.find_elements_by_xpath('//*/div[@class="morepost bounce"]/a')
+                    while next_p:
                         try:
-                            next[0].click()
+                            next_p[0].click()
                             time.sleep(1.5)
-                        except:
+                        except Exception:
                             break
                     for _ in self.dr.find_elements_by_xpath('//*/h2[@class="related-posts-title"]/a'):
                         all_urls[cat][sub][_.get_attribute('text').strip()] = _.get_attribute('href')

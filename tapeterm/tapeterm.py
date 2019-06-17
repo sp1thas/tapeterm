@@ -29,7 +29,8 @@ class TapeTerm(object):
             stderr=subprocess.PIPE,
         )
         self.mpsyt_bin = pr.communicate()[0].strip()
-        assert self.mpsyt_bin, 'mpsyt binary not found'
+        if not self.mpsyt_bin:
+            raise OSError('mpsyt binary not found')
 
     def disp_menu(self, label=''):
         """
@@ -76,7 +77,7 @@ class TapeTerm(object):
             subprocess.call([self.mpsyt_bin, 'pl', playlist_id+',dump,all'])
         except KeyboardInterrupt:
             pass
-        except Exception as e:
+        except Exception:
             print('There has been a error:')
             traceback.print_exc()
         finally:
@@ -87,7 +88,8 @@ class TapeTerm(object):
         Read Config JSON FILE
         :return:
         """
-        assert os.path.exists(self.JSON)
+        if not os.path.exists(self.JSON):
+            raise OSError('JSON file not found')
         with open(self.JSON, 'r') as f:
             return json.load(f)
 

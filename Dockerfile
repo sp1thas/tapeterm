@@ -1,10 +1,10 @@
 FROM rothgar/mpsyt:latest
 
-ADD MANIFEST.in MANIFEST.in
-ADD tapeterm tapeterm
-ADD requirements.txt requirements.txt
-ADD setup.py setup.py
-ADD README.md README.md
+COPY MANIFEST.in MANIFEST.in
+COPY tapeterm tapeterm
+COPY requirements.txt requirements.txt
+COPY setup.py setup.py
+COPY README.md README.md
 
 ENV LANG=en
 
