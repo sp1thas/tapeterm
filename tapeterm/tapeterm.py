@@ -48,21 +48,21 @@ class TapeTerm(object):
                 if isinstance(v, str) and len(v) == 34:
                     items[k] = {
                         'label': '[PL] '+k.capitalize(),
-                        'callback': self.play,
+                        'clb': self.play,
                         'args': (v, label)
                     }
                 else:
                     items[k] = {
                         'label': '[  ] '+k.capitalize(),
-                        'callback': self.disp_menu,
+                        'clb': self.disp_menu,
                         'kwargs': {'label': label+'/'+k}
                     }
         for k in sorted(items.keys()):
             item = items[k]
             mn.add_item(**item)
         if label != '':
-            mn.add_item(label='     Parent Category', callback=self.disp_menu, args=('/'.join(label.split('/')[:-1]),))
-        mn.add_item(label='     Exit', callback=sys.exit)
+            mn.add_item(label='     Parent Category', clb=self.disp_menu, args=('/'.join(label.split('/')[:-1]),))
+        mn.add_item(label='     Exit', clb=sys.exit)
         mn.set_colors(num_fg='purple', num_bld=False, label_fg='red', label_bld=True)
         mn.run(header=header())
 
