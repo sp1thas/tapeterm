@@ -17,7 +17,7 @@ pip install git+https://github.com/sp1thas/tapeterm
 
 ## Usage
 ```bash
-tapeterm --en # for english version else --el
+tt --en # for english version else --el
 ```
 
 ## Author
