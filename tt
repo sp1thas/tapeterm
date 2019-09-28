@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+from tapeterm.tapeterm import *
+
+if __name__ == "__main__":
+    args = arg_parsing()
+    if args.en:
+        json_file = JSON_EN[:]
+    else:
+        json_file = JSON_EL[:]
+
+    tp = TapeTerm(JSON=json_file)
+    tp.disp_menu()

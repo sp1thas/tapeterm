@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from setuptools import setup
+from setuptools import setup, find_packages
 
 readme_file = open('README.md', 'r')
 long_description = readme_file.read()
@@ -18,8 +18,10 @@ setup(
     keywords=['kasetophono'],
     description='Listen kasetophono\'s playlists from your terminal',
     long_description=long_description,
-    entry_points={'console_scripts': ['tapeterm = tapeterm.tapeterm:main']},
+    scripts=[
+        "tt"
+    ],
     install_requires=install_requires,
-    packages=['tapeterm'],
+    packages=find_packages(),
     include_package_data=True
 )

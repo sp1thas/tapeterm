@@ -1,10 +1,9 @@
-#!/usr/bin/python2.7
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
 from __future__ import unicode_literals, absolute_import
 import json
 import sys
 import argparse
-from .config import *
+from tapeterm.config import *
 from pyclimenu.menu import Menu
 import dpath
 import subprocess
@@ -99,14 +98,3 @@ def arg_parsing():
     parser.add_argument("--en", help="English version", action="store_true")
     parser.add_argument("--el", help="Greek version", action="store_true")
     return parser.parse_args()
-
-
-def main():
-    args = arg_parsing()
-    if args.en:
-        json_file = JSON_EN[:]
-    else:
-        json_file = JSON_EL[:]
-
-    tp = TapeTerm(JSON=json_file)
-    tp.disp_menu()
