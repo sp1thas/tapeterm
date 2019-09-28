@@ -1,6 +1,7 @@
 dpath
 mps-youtube
-pyclimenu
+pyclimenu>=0.1.15
 six
 urllib3
 youtube-dl
+
