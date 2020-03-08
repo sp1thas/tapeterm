@@ -113,7 +113,7 @@ class TapeTerm(object):
 
 def arg_parsing():
     parser = argparse.ArgumentParser(description='tapeterm: listen your favorite playlist from your terminal')
-    parser.add_argument("--language", help="Select language", choices=['en', 'el'])
+    parser.add_argument("--language", help="Select language", choices=['en', 'el'], default='en')
     parser.add_argument("--youtube-api-key", help="Provide your youtube API Key", required=True)
     parser.add_argument("--player", help="Specify player (must be installed)", default='cvlc')
     return parser.parse_args()
