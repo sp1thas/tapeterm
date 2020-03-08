@@ -3,10 +3,10 @@ from tapeterm.tapeterm import *
 
 if __name__ == "__main__":
     args = arg_parsing()
-    if args.en:
+    if args.lang == 'en':
         json_file = JSON_EN[:]
-    else:
+    elif args.lang == 'el':
         json_file = JSON_EL[:]
 
-    tp = TapeTerm(JSON=json_file)
+    tp = TapeTerm(json_file=json_file, api_key=args.youtube_api_key, player=args.player)
     tp.disp_menu()

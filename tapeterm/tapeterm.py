@@ -8,26 +8,44 @@ from pyclimenu.menu import Menu
 import dpath.util
 import subprocess
 import traceback
-from .misc import header
+from tapeterm.misc import header
 
 
 class TapeTerm(object):
     """
     Tapeterm main class
+
+    :param json_file: json file path
+    :type json_file: str
+    :param api_key: youtube API key
+    :type api_key: str
+    :param player: audio player bin
+    :type player: str
     """
-    def __init__(self, JSON=None):
+    def __init__(self, json_file=None, api_key=None, player=None):
         """
         Tape term constructor
         """
         # self.tl = TapeLib()
-        self.JSON = JSON
+        self.JSON = json_file
         self.data = self.read_json()
         pr = subprocess.Popen(
             ['which', 'mpsyt'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
+        if not api_key:
+            raise ValueError('API Key is not provided')
         self.mpsyt_bin = pr.communicate()[0].strip()
+
+        p = subprocess.Popen(
+            ['rm', '~/.config/mps-youtube/cache_py*', '||', 'mpsyt'],
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE
+        )
+        o, e = p.communicate(
+            input='set api_key {}\nset show_video false\nset player {}\nexit\n'.format(api_key, player).encode()
+        )
+
         if not self.mpsyt_bin:
             raise OSError('mpsyt binary not found')
 
@@ -95,6 +113,7 @@ class TapeTerm(object):
 
 def arg_parsing():
     parser = argparse.ArgumentParser(description='tapeterm: listen your favorite playlist from your terminal')
-    parser.add_argument("--en", help="English version", action="store_true")
-    parser.add_argument("--el", help="Greek version", action="store_true")
+    parser.add_argument("--language", help="Select language", choices=['en', 'el'])
+    parser.add_argument("--youtube-api-key", help="Provide your youtube API Key", required=True)
+    parser.add_argument("--player", help="Specify player (must be installed)", default='cvlc')
     return parser.parse_args()
