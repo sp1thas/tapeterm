@@ -5,7 +5,7 @@ import sys
 import argparse
 from tapeterm.config import *
 from pyclimenu.menu import Menu
-import dpath
+import dpath.util
 import subprocess
 import traceback
 from .misc import header
