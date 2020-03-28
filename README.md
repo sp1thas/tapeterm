@@ -12,12 +12,12 @@ Listen [Kasetophono](http://www.kasetophono.com)'s youtube playlists from your t
 
 ## Installation
 ```bash
-pip install git+https://github.com/sp1thas/tapeterm
+pip install git+https://github.com/sp1thas/tapeterm.git
 ```
 
 ## Usage
 ```bash
-tt --en # for english version else --el
+tt --en --api-key <API_KEY>
 ```
 
 ## Author
